@@ -37,6 +37,7 @@ Font Awesome 4.6.3 by @davegandy
 
 
 #Versions
+
 1.0.0 - 2016.03.08
 - Initial release
 
@@ -128,6 +129,4 @@ Font Awesome 4.6.3 by @davegandy
 - Updated theme information for author rebranding
 - Fixed usage of get_the_permalink instead of the_permalink on .post-thumbnail and .read-more in template-parts/loop.php
 - Simplified js/functions.js
-
-
-Added table of contents to style.css
+- Added table of contents to style.css
