@@ -1,0 +1,99 @@
+/* 9.0 Post formats */
+.single-format-video .post{
+  iframe,
+  video,
+  embed,
+  object,
+  .video-player,
+  .videopress-placeholder{
+    display: block;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.single-format-image .post{
+  img,
+  .wp-caption{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.single-format-audio,
+.single-format-video,
+.single-format-status,
+.single-format-link,
+.single-format-quote{
+	.post{
+		background-color: #191919; 
+		color: white;
+		padding: .25em 1em;
+
+
+		a{
+			color: white;
+			text-decoration: underline;
+		}
+	}
+}
+
+.single-format-audio .post{ background-color: #222222; }
+
+.single-format-status,
+.single-format-link{
+	.post{
+		text-align: center; 
+		font-size: 2em;
+		font-weight: bold;
+	}
+}
+
+.single-format-chat .post p:nth-child(odd){ background-color: rgba($borderColor, .1) }
+
+/* post format prefix icons*/
+.single:not(.single-format-standard) .content-title:before{
+	font-family: FontAwesome;
+	font-weight: normal;
+	margin-right: .5rem;
+}
+
+.single-attachment,
+.single-format-image,
+.single-format-gallery,
+.archive.term-post-format-image,
+.archive.term-post-format-gallery{
+	.content-title:before{ content: '\f03e'; }
+}
+
+.single-format-audio,
+.archive.term-post-format-audio{
+	.content-title:before{ content: '\f001'; }
+}
+
+.single-format-video,
+.archive.term-post-format-video{
+	.content-title:before{ content: '\f03d'; }
+}
+
+.single-format-status,
+.archive.term-post-format-status{
+	.content-title:before{ content: '\f12a'; }
+}
+
+.single-format-link,
+.archive.term-post-format-link{
+	.content-title:before{ content: '\f0c1'; }
+}
+
+.single-format-quote,
+.archive.term-post-format-quote{
+	.content-title:before{ content: '\f10e'; }
+}
+
+.single-format-chat,
+.archive.term-post-format-chat{
+	.content-title:before{ content: '\f086'; }
+}

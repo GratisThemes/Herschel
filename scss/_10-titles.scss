@@ -1,0 +1,26 @@
+/* 10.0 Titles */
+.entry-header{ margin-bottom: 2em; }
+
+.entry-title{
+	a{
+		color: $titleColor;
+
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.entry-title-archive{ font-size: 2em; }
+
+.entry-title-description p{ margin: 0; }
+
+.archive .content-title:before{
+	font-family: FontAwesome;
+	content: '\f114';
+	margin-right: .5rem;
+}
+
+.tag .content-title:before{ content: '\f02b'; }
+.author .content-title:before{ content: '\f007'; }
+.date .content-title:before{ content: '\f073'; }

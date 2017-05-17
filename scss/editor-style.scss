@@ -1,0 +1,58 @@
+/*
+Theme Name: Herschel
+Description: Used to style the TinyMCE editor.
+*/
+@import "00-variables";
+@import url( 'style.css' );
+
+body{ 
+  margin: 20px;
+}
+
+.mce-item-table{
+  th,
+  td{
+    border: 1px solid $borderColor;
+  }
+}
+
+.wp-caption-text,
+.gallery-caption,
+.wp-caption-dd{
+  text-align: center;
+  padding: 8px 0px 10px;
+}
+
+.gallery,
+.gallery-item{
+  float: none !important;
+}
+
+.gallery-item{
+  margin: 0 0 16px 0 !important;
+}
+
+.post-format-audio,
+.post-format-video,
+.post-format-status,
+.post-format-link,
+.post-format-quote{
+  background-color: #191919; 
+  color: white;
+  padding: .25em 1em;
+
+
+  a{
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.post-format-status,
+.post-format-link{
+  text-align: center; 
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.post-format-chat p:nth-child(odd){ background-color: rgba($borderColor, .1) }

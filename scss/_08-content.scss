@@ -1,0 +1,16 @@
+/* 8.0 Content */
+.post{
+	word-wrap: break-word;
+}
+
+.sticky{
+	background-color: rgba(0,0,0,0);
+}
+
+.archive-entry{
+	margin-bottom: 1em;
+
+	.entry-meta{ padding-bottom: .5em;}
+
+	> p{ margin-top: .5em;}
+}
