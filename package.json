@@ -1,6 +1,6 @@
 {
   "name": "herschel",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Responsive and customizable WordPress theme",
   "main": "gulpfile.js",
   "scripts": {

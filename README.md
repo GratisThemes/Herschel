@@ -130,3 +130,6 @@ Font Awesome 4.6.3 by @davegandy
 - Fixed usage of get_the_permalink instead of the_permalink on .post-thumbnail and .read-more in template-parts/loop.php
 - Simplified js/functions.js
 - Added table of contents to style.css
+
+1.4.3 - 2017.05.17
+- Fixed language file

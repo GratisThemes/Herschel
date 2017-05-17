@@ -1,8 +1,8 @@
-# Copyright (C) 2017 reginald
-# This file is distributed under the same license as the reginald package.
+# Copyright (C) 2017 herschel
+# This file is distributed under the same license as the herschel package.
 msgid ""
 msgstr ""
-"Project-Id-Version: reginald\n"
+"Project-Id-Version: herschel\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,3 +16,299 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: 404.php:14
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: 404.php:15
+msgid "It looks like nothing was found at this location."
+msgstr ""
+
+#. translators: %s: post title
+#: comments.php:21
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:25
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:59
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:38
+msgid "Theme: %1$s by %2$s"
+msgstr ""
+
+#: functions.php:83
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:84
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:97
+msgid "Header"
+msgstr ""
+
+#: functions.php:99
+msgid "Widget area in the header"
+msgstr ""
+
+#: functions.php:107
+msgid "Above the content"
+msgstr ""
+
+#: functions.php:109
+msgid "Widget area above the content"
+msgstr ""
+
+#: functions.php:117
+msgid "Below the content"
+msgstr ""
+
+#: functions.php:119
+msgid "Widget area below the content"
+msgstr ""
+
+#: functions.php:127
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:129
+msgid "Widget area at the side of the content"
+msgstr ""
+
+#: functions.php:137
+msgid "Footer (top)"
+msgstr ""
+
+#: functions.php:139
+msgid "Widget area at the top of the footer"
+msgstr ""
+
+#: functions.php:147
+msgid "Footer (bottom)"
+msgstr ""
+
+#: functions.php:149
+msgid "Widget area at the bottom of the footer"
+msgstr ""
+
+#: image.php:25
+msgid "Previous Image"
+msgstr ""
+
+#: image.php:26
+msgid "Next Image"
+msgstr ""
+
+#: searchform.php:11, searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:12
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: inc/customize.php:20
+msgid "Display Site Title"
+msgstr ""
+
+#: inc/customize.php:32
+msgid "Display Tagline"
+msgstr ""
+
+#: inc/customize.php:44
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customize.php:56
+msgid "Text Color"
+msgstr ""
+
+#: inc/customize.php:63
+msgid "Entry Metadata"
+msgstr ""
+
+#: inc/customize.php:74
+msgid "Display author"
+msgstr ""
+
+#: inc/customize.php:86
+msgid "Display date posted"
+msgstr ""
+
+#: inc/customize.php:98
+msgid "Display comment count"
+msgstr ""
+
+#: inc/customize.php:110
+msgid "Display Categories"
+msgstr ""
+
+#: inc/customize.php:122
+msgid "Display Tags"
+msgstr ""
+
+#: inc/customize.php:134
+msgid "Display Author Bio"
+msgstr ""
+
+#: inc/customize.php:141
+msgid "Design Options"
+msgstr ""
+
+#: inc/customize.php:152
+msgid "Display breadcrumbs"
+msgstr ""
+
+#: inc/customize.php:166
+msgid "Change the layout of the site"
+msgstr ""
+
+#: inc/customize.php:169, inc/customize.php:322
+msgid "Wide"
+msgstr ""
+
+#: inc/customize.php:170, inc/customize.php:323
+msgid "Condensed"
+msgstr ""
+
+#: inc/customize.php:171, inc/customize.php:324
+msgid "Full Content"
+msgstr ""
+
+#: inc/customize.php:182
+msgid "Display thumbnails on index pages"
+msgstr ""
+
+#: inc/customize.php:194
+msgid "Display thumbnails on content pages"
+msgstr ""
+
+#: inc/customize.php:206
+msgid "Display read more button"
+msgstr ""
+
+#: inc/customize.php:213
+msgid "Social Media Icons"
+msgstr ""
+
+#: inc/customize.php:224
+msgid "RSS Link"
+msgstr ""
+
+#: inc/customize.php:247
+msgid "Footer"
+msgstr ""
+
+#: inc/customize.php:258
+msgid "Footer text"
+msgstr ""
+
+#: inc/customize.php:270
+msgid "Show Copyright Icon"
+msgstr ""
+
+#: inc/customize.php:282
+msgid "Show Current Year"
+msgstr ""
+
+#: inc/customize.php:294
+msgid "Advertise Theme Author"
+msgstr ""
+
+#: inc/customize.php:306
+msgid "Scroll to top icon"
+msgstr ""
+
+#: template-parts/author_bio.php:14
+msgid "Author:"
+msgstr ""
+
+#: template-parts/content-none.php:9
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:18
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:23
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/content.php:20
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content.php:24, template-parts/loop.php:60
+msgid "Page"
+msgstr ""
+
+#: template-parts/content.php:43
+msgid "Next post:"
+msgstr ""
+
+#: template-parts/content.php:46
+msgid "Previous post:"
+msgstr ""
+
+#: template-parts/content_header.php:17
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content_header.php:20
+msgid "404 Not Found"
+msgstr ""
+
+#: template-parts/content_header.php:23
+msgid "Untitled Post"
+msgstr ""
+
+#: template-parts/entry_meta.php:74
+msgctxt "Used before post format."
+msgid "Format"
+msgstr ""
+
+#: template-parts/entry_meta.php:99
+msgid "Edit"
+msgstr ""
+
+#: template-parts/loop.php:22
+msgid "Untitled post"
+msgstr ""
+
+#: template-parts/loop.php:38
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/loop.php:46
+msgid "Read more"
+msgstr ""
+
+#: template-parts/loop.php:58
+msgid "Previous page"
+msgstr ""
+
+#: template-parts/loop.php:59
+msgid "Next page"
+msgstr ""

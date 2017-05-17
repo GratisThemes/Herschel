@@ -6,8 +6,8 @@ gulp.task('pot', () => {
   return gulp.src('./**/*.php')
     .pipe(sort())
     .pipe(wpPot( {
-      domain: 'reginald',
-      package: 'reginald',
+      domain: 'herschel',
+      package: 'herschel',
       bugReport: 'https://github.com/kniffen/Herschel/issues',
       lastTranslator: 'Kniffen <knifftech@gmail.com>',
       team: 'Kniffen <knifftech@gmail.com>'
