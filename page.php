@@ -1,25 +1,31 @@
 <?php
 /**
- * Template for displaying pages
+ * Template for displaying Page content
  *
  * @package Herschel
- * @since Herschel 1.0
+ * @since 1.0.0
+ * @version 1.5.0
  */
-get_header(); ?>
-
-<main>
-	<?php get_sidebar('content-above'); ?>
-	
-	<?php
-		get_template_part('template-parts/content');
-
-		if( comments_open() || get_comments_number() ):
-			comments_template();
-		endif;
-	?>
-</main>
-
-<?php
-	get_sidebar();
-	get_footer();
 ?>
+
+<?php get_header(); ?>
+
+<div id="main-content-container">
+
+  <main id="site-main" role="main">
+
+    <?php while ( have_posts() ): the_post(); ?>
+      
+      <?php get_template_part( 'template-parts/content', 'page' ); ?>
+
+      <?php if ( comments_open() || get_comments_number() ) comments_template(); ?>
+      
+    <?php endwhile; ?>
+
+  </main><!-- #site-main -->
+
+  <?php get_sidebar(); ?>
+
+</div><!-- #main-content-container -->
+
+<?php get_footer(); ?>

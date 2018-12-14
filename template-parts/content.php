@@ -1,54 +1,43 @@
 <?php
 /**
- * The template part for displaying content
+ * Template for displaying content
  *
  * @package Herschel
- * @since Herschel 1.4.0
+ * @since 1.4.0
+ * @version 1.5.0 [Improved markup]
  */
-if( have_posts() ): the_post(); ?>
-	<?php get_template_part('template-parts/content_header'); ?>
+?>
+<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  
+  <?php get_template_part( 'template-parts/entry', 'header' ); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>	
-		<?php the_content(); ?>
+  <?php if (
+    get_the_post_thumbnail() !== '' &&
+    (
+      ( ( is_home() || is_archive() ) && get_theme_mod( 'thumbnail_index', true ) ) ||
+      ( is_single() && get_theme_mod( 'thumbnail_content', true ) )
+    )
+  ): ?>
+    <a class="post-thumbnail" href="<?php the_permalink() ?>">
+      <?php the_post_thumbnail( 'herschel-featured-image' ); ?>
+    </a><!-- .post-thumbnail -->
+  <?php endif; ?>
 
-		<div style="clear: both; height: 0px;">&nbsp;</div>
-	</article>
+  <article class="entry-content">
+    <?php
+    the_content();
 
+    wp_link_pages( array(
+      'before' => '<div class="page-links">' . __( 'Pages:', 'herschel' ),
+      'after' => '</div>',
+      'link_before' => '<span class="page-number">',
+      'link_after' => '</span>',
+    ) );
+    ?>
+  </article><!-- .entry-content -->
 
-	<?php if( is_single() ){
-		wp_link_pages( array(
-			'before'      => '<div class="pagination"><span class="page-links-title">' . __( 'Pages:', 'herschel' ) . '</span>',
-			'after'       => '</div>',
-			'link_before' => '<span>',
-			'link_after'  => '</span>',
-			'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'herschel' ) . ' </span>%',
-			'separator'   => '<span class="screen-reader-text">, </span>',
-		) );
-	}
-
-	( !is_page() ) ? get_template_part('template-parts/author_bio') : false;
-
-	// tags
-	if( get_theme_mod( 'entry_meta_tags', true ) && has_tag() ): ?>
-		<div class="tags">
-			<i class="fa fa-tag"></i>
-			<?php the_tags('', ', ') ?>
-		</div>
-	<?php endif; ?>
-
-
-	<?php if( is_singular( 'post' ) ):
-		// Previous/next post navigation.
-		the_post_navigation( array(
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next post:', 'herschel' ) . '</span> ' .
-				'<span class="post-title">%title</span>',
-			'prev_text' => '<span class="meta-nav" aria-hidden="true"></span> ' .
-				'<span class="screen-reader-text">' . __( 'Previous post:', 'herschel' ) . '</span> ' .
-				'<span class="post-title">%title</span>',
-		) );
-	endif; ?>
-
-<?php else: get_template_part( 'template-parts/content', 'none' ); ?>
-
-<?php endif; ?>
-
+  <?php
+  if ( is_single() ) {
+    get_template_part('template-parts/entry', 'footer');
+  } ?>
+</section>

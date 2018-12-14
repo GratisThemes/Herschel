@@ -1,0 +1,139 @@
+.entry-footer {
+  display: grid;
+  grid-gap: 2em;
+}
+
+.author-bio {
+  display: grid;
+  grid-gap: .5em;
+  font-size: .8rem;
+
+  h5,
+  p {
+    margin: 0;
+  }
+
+  h5 {
+    font-size: .8rem;
+  }
+
+  > div {
+    display: grid;
+    align-content: start;
+  }
+}
+
+.post-tags {
+  display: grid;
+
+  &::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: '\f02b';
+  }
+}
+
+.post-navigation {
+  .nav-links {
+    display: grid;
+    grid-template-columns: minmax(0, 100%);
+    grid-gap: 1em;
+  }
+
+  .nav-previous a,
+  .nav-next a {
+    span:nth-child(2) {
+      text-transform: uppercase;
+      font-size: .8rem;
+      font-weight: 600;
+    }
+  }
+
+  .nav-previous::before,
+  .nav-next::after {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+  }
+
+  .nav-previous::before {
+    content: '\f177';
+    padding-right: .5em;
+  }
+
+  .nav-next::after {
+    content: '\f178';
+    padding-left: .5em;
+  }
+}
+
+.pagination .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .page-numbers {
+    padding: .1em .25em;
+  }
+
+  .page-numbers:not(.dots) {
+    border: 0.0625em solid var(--color-scheme);
+    border-radius: .15em;    
+  }
+
+  .page-numbers:not(.current):not(.dots) {
+    background-color: var(--color-scheme);
+    color: var(--color-text-alt);
+
+    &:hover {
+      text-decoration: none;
+      filter: brightness(110%);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .post-navigation {
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .nav-previous,
+    .nav-next {
+      margin-bottom: 1em;
+    }
+
+    .nav-previous {
+      margin-right: 1em;
+    }
+
+    .nav-next {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .author-bio {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    &::before {
+      padding-right: 1em;
+    }
+
+    > *:not(:last-child) {
+      margin-right: .5em;
+    }
+  }
+}

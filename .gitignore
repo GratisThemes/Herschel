@@ -1,8 +1,8 @@
 # node
 node_modules/
 
-# private dev information
-tasks/local-ftp-info.json
-
 # included libs
-lib/font-awesome/
+assets/icons/font-awesome/
+
+# package lock
+package-lock.json

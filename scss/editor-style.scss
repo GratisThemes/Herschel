@@ -1,58 +1,36 @@
+@charset "UTF-8";
 /*
-Theme Name: Herschel
-Description: Used to style the TinyMCE editor.
+  Theme Name: Herschel
+  Description: Used to style the TinyMCE and Gutenberg editors.
 */
-@import "00-variables";
-@import url( 'style.css' );
 
-body{ 
-  margin: 20px;
+/* Table of Contents
+  -------------------------------
+  1.0 Normalize
+  2.0 Variables
+  3.0 Tags and Elements
+  4.0 Form elements
+*/
+
+/* 1.0 Normalize */
+@import "normalize";
+
+/* 2.0 Variables */
+@import "variables";
+
+/* 3.0 Tags and Elements */
+body {
+  font-family: var(--font-family);
+  margin: 1em;
 }
 
-.mce-item-table{
-  th,
-  td{
-    border: 1px solid $borderColor;
-  }
+@import "content-tags-and-elements";
+
+table,
+td,
+th {
+  border: 0.0625em solid black;
 }
 
-.wp-caption-text,
-.gallery-caption,
-.wp-caption-dd{
-  text-align: center;
-  padding: 8px 0px 10px;
-}
-
-.gallery,
-.gallery-item{
-  float: none !important;
-}
-
-.gallery-item{
-  margin: 0 0 16px 0 !important;
-}
-
-.post-format-audio,
-.post-format-video,
-.post-format-status,
-.post-format-link,
-.post-format-quote{
-  background-color: #191919; 
-  color: white;
-  padding: .25em 1em;
-
-
-  a{
-    color: white;
-    text-decoration: underline;
-  }
-}
-
-.post-format-status,
-.post-format-link{
-  text-align: center; 
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.post-format-chat p:nth-child(odd){ background-color: rgba($borderColor, .1) }
+/* 4.0 Form elements */
+@import "content-form-elements";

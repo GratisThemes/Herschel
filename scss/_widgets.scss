@@ -1,0 +1,87 @@
+#widget-areas-footer-container {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-alt);
+  padding: 2em 0;
+  
+  a {
+    color: var(--color-text-alt);
+
+    &:hover {
+      color: var(--color-scheme);
+    }
+  }
+
+  .widget_calendar a {
+    color: var(--color-scheme);
+  }
+}
+
+.widget-title {
+  margin-bottom: .5em;
+}
+
+.widget {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    ul {
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  li {
+    line-height: 2em;
+  }
+
+  > ul > li {
+    border-bottom: 0.0625em solid var(--color-border);    
+  }
+
+  a {
+    color: var(--color-text);
+
+    &:hover {
+      color: var(--color-scheme);
+      text-decoration: none;
+    }
+  }
+}
+
+.widget_calendar {
+  table {
+    display: table !important;
+    max-width: 100%;
+    table-layout: fixed;
+  }
+
+  td,
+  th {
+    text-align: center;
+    padding: .5em;
+  }
+
+  #prev,
+  #prev+.pad {
+    border-right: 0;
+  }
+
+  #prev {
+    text-align: left;
+  }
+
+  #next {
+    text-align: right;
+  }
+
+  a {
+    color: var(--color-scheme);
+    font-weight: 600;
+  }
+}
+
+/* RSS Widget */
+.rss-widget-icon {
+  border-radius: 0px;
+}

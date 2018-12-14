@@ -1,19 +1,31 @@
 <?php
 /**
- * Template for displaying posts
+ * Template for displaying songle post content
  *
  * @package Herschel
- * @since Herschel 1.0
+ * @since 1.0.0
+ * @version 1.5.0
  */
-get_header(); ?>
+?>
 
-<main>
-	<?php get_sidebar('content-above')?>
+<?php get_header(); ?>
 
-	<?php get_template_part('template-parts/content'); ?>
+<div id="main-content-container">
 
-	<?php if( comments_open() || get_comments_number() ) comments_template(); ?>
-</main>
+  <main id="site-main" role="main">
 
-<?php get_sidebar(); ?>
+    <?php while ( have_posts() ): the_post(); ?>
+
+      <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+
+      <?php if ( comments_open() || get_comments_number() ) comments_template(); ?>
+
+    <?php endwhile; ?>
+
+  </main><!-- #site-main -->
+
+  <?php get_sidebar(); ?>
+
+</div><!-- #main-content-container -->
+
 <?php get_footer(); ?>
