@@ -6,6 +6,7 @@
  * @since 1.0.0
  * @version 1.5.0 [Removed jQuery from theme js file]
  * @version 1.5.0 [Modified custom CSS options]
+ * @version 1.5.1 [Added version paramater to stylesheet URL]
  */
 function herschel_scripts() {
 
@@ -16,7 +17,7 @@ function herschel_scripts() {
   wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/icons/font-awesome/css/font-awesome.min.css', array(), '4.6.3');
 
   // Theme stylesheet
-  wp_enqueue_style( 'herschel-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'herschel-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version') );
 
   // Theme JavaScript
   wp_enqueue_script( 'herschel-script', get_template_directory_uri() . '/assets/js/functions.js', false, wp_get_theme()->get('Version'), true );

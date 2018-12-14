@@ -145,3 +145,6 @@ Font Awesome 4.6.3 by @davegandy
 - Updated language files
 - Added support for the_privacy_policy_link
 - Improved editor styles
+
+1.5.1 - 2018.12.14
+- Added version paramater to stylesheet URL

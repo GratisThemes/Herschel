@@ -9,7 +9,7 @@ const zip     = require( 'gulp-zip' )
 const info = {
   name:      'Herschel',
   slug:      'herschel',
-  version:   '1.5.0',
+  version:   '1.5.1',
   author:    'GratisThemes',
   email:     'gratisthemes@gmail.com',
   bugReport: 'https://github.com/GratisThemes/Fell/issues'
