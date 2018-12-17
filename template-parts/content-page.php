@@ -22,6 +22,12 @@
       ?>
     </div><!-- .entry-meta -->
   </header><!-- .entry-header -->
+
+  <?php if ( get_the_post_thumbnail() !== '' && get_theme_mod( 'thumbnail_content', true ) ): ?>
+    <a class="post-thumbnail" href="<?php the_permalink() ?>">
+      <?php the_post_thumbnail( 'herschel-featured-image' ); ?>
+    </a><!-- .post-thumbnail -->
+  <?php endif; ?>
   
   <article class="entry-content">
     <?php 

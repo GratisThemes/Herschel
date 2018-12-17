@@ -44,6 +44,17 @@
     ?>
 
     <?php
+    if ( wp_attachment_is_image() ) {
+      $metadata = wp_get_attachment_metadata();
+
+      printf( '<span class="entry-meta-image-dimesions">%1$sx%2$s</span>',
+        absint( $metadata['width'] ),
+        absint( $metadata['height'] )
+      );
+    }
+    ?>
+
+    <?php
     if ( get_theme_mod( 'entry_meta_comments', true) ) {
       $herschel_comment_count = get_comments_number();
       if ( $herschel_comment_count && comments_open() ) {
@@ -57,27 +68,23 @@
     ?>
 
     <?php
-    if ( !is_single() ) {
+    if ( has_post_format() ) {
       $herschel_post_format = get_post_format();
-      if ( $herschel_post_format ) {
-        printf(
-          '<span class="entry-meta-post-format"><a href="%1$s">%2$s</a></span>',
-          esc_url( get_post_format_link(  $herschel_post_format ) ),
-          get_post_format_string( $herschel_post_format )
-        );
-      }
+
+      printf(
+        '<span class="entry-meta-post-format"><a href="%1$s">%2$s</a></span>',
+        esc_url( get_post_format_link(  $herschel_post_format ) ),
+        get_post_format_string( $herschel_post_format )
+      );
     }
     ?>
 
     <?php
-    if ( get_theme_mod( 'entry_meta_categories', true) ) {
-      $herschel_categories_list = get_the_category_list( ', ' );
-      if ( $herschel_categories_list ) {
-        printf(
-          '<span class="entry-meta-categories">%s</span>',
-          $herschel_categories_list
-        );
-      }
+    if ( has_category() && get_theme_mod( 'entry_meta_categories', true) ) {
+      printf(
+        '<span class="entry-meta-categories">%s</span>',
+        get_the_category_list( ', ' )
+      );
     }
     ?>
 

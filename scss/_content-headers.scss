@@ -39,6 +39,16 @@
 .archive.category .page-header h1::before,
 .archive.date .page-header h1::before,
 .archive.tag .page-header h1::before,
+.archive.author .page-header h1::before,
+.archive.term-post-format-gallery .page-header h1::before,
+.archive.term-post-format-image .page-header h1::before,
+.archive.term-post-format-audio .page-header h1::before,
+.archive.term-post-format-video .page-header h1::before,
+.archive.term-post-format-status .page-header h1::before,
+.archive.term-post-format-link .page-header h1::before,
+.archive.term-post-format-quote .page-header h1::before,
+.archive.term-post-format-chat .page-header h1::before,
+.attachment .entry-header h1::before,
 .search-results .page-header h1::before {
   font-family: FontAwesome;
   font-style: normal;
@@ -70,8 +80,13 @@
   content: "\f073"
 }
 
-.entry-meta-author::before {
+.entry-meta-author::before,
+.archive.author .page-header h1::before {
   content: "\f007";
+}
+
+.entry-meta-image-dimesions::before {
+  content: "\f030";  
 }
 
 .entry-meta-comments::before {
@@ -81,37 +96,46 @@
 .format-gallery .entry-meta-post-format::before,
 .format-image .entry-meta-post-format::before,
 .single-format-gallery .entry-header h1::before,
-.single-format-image .entry-header h1::before {
+.single-format-image .entry-header h1::before,
+.archive.term-post-format-gallery .page-header h1::before,
+.archive.term-post-format-image .page-header h1::before,
+.attachment .entry-header h1::before {
   content: "\f03e";
 }
 
 .format-audio .entry-meta-post-format::before,
-.single-format-audio .entry-header h1::before {
+.single-format-audio .entry-header h1::before,
+.archive.term-post-format-audio .page-header h1::before {
   content: "\f001";
 }
 
 .format-video .entry-meta-post-format::before,
-.single-format-video .entry-header h1::before {
+.single-format-video .entry-header h1::before,
+.archive.term-post-format-video .page-header h1::before {
   content: "\f03d";
 }
 
 .format-status .entry-meta-post-format::before,
-.single-format-status .entry-header h1::before {
+.single-format-status .entry-header h1::before,
+.archive.term-post-format-status .page-header h1::before {
   content: "\f12a";
 }
 
 .format-link .entry-meta-post-format::before,
-.single-format-link .entry-header h1::before {
+.single-format-link .entry-header h1::before,
+.archive.term-post-format-link .page-header h1::before  {
   content: "\f0c1";
 }
 
 .format-quote .entry-meta-post-format::before,
-.single-format-quote .entry-header h1::before {
+.single-format-quote .entry-header h1::before,
+.archive.term-post-format-quote .page-header h1::before  {
   content: "\f10e";
 }
 
 .format-chat .entry-meta-post-format::before,
-.single-format-chat .entry-header h1::before {
+.single-format-chat .entry-header h1::before,
+.archive.term-post-format-chat .page-header h1::before  {
   content: "\f086";
 }
 

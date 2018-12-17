@@ -28,16 +28,12 @@
   <?php endif; ?>
     
   <?php
-  if ( get_theme_mod( 'entry_meta_tags', true ) ) {
-    $herschel_tags_list = get_the_tag_list();
-    if ( $herschel_tags_list ) : ?>
-      <div class="post-tags">
-        <span class="screen-reader-text"><?php _e( 'tags', 'herschel'); ?></span>
-        <?php echo $herschel_tags_list; ?>
-      </div><!-- .post-tags -->
-    <?php endif; 
-  }
-  ?>
+  if ( has_tag() && get_theme_mod( 'entry_meta_tags', true ) ): ?>
+    <div class="post-tags">
+      <?php the_tags('', ', '); ?>
+      <span class="screen-reader-text"><?php _e( 'tags', 'herschel'); ?></span>
+    </div><!-- .post-tags -->
+  <?php endif; ?>
 
   <?php
   the_post_navigation( array(

@@ -5,7 +5,7 @@
   Author: Gratis Themes
   Author URI: https://gratisthemes.github.io/
   Description: Responsive and customizable theme, pick any color scheme you want. Includes multiple widget areas
-  Version: 1.5.1
+  Version: 1.6.0
   License: GNU General Public License v3
   License URI: http://www.gnu.org/licenses/gpl-3.0.html  
   Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, featured-images, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -774,6 +774,7 @@ template {
     top: 100%;
     left: 0;
     margin: 0;
+    z-index: 10;
   }
   #header-nav ul ul {
     top: 0;
@@ -886,6 +887,16 @@ body {
 .archive.category .page-header h1::before,
 .archive.date .page-header h1::before,
 .archive.tag .page-header h1::before,
+.archive.author .page-header h1::before,
+.archive.term-post-format-gallery .page-header h1::before,
+.archive.term-post-format-image .page-header h1::before,
+.archive.term-post-format-audio .page-header h1::before,
+.archive.term-post-format-video .page-header h1::before,
+.archive.term-post-format-status .page-header h1::before,
+.archive.term-post-format-link .page-header h1::before,
+.archive.term-post-format-quote .page-header h1::before,
+.archive.term-post-format-chat .page-header h1::before,
+.attachment .entry-header h1::before,
 .search-results .page-header h1::before {
   font-family: FontAwesome;
   font-style: normal;
@@ -917,8 +928,13 @@ body {
   content: "\f073";
 }
 
-.entry-meta-author::before {
+.entry-meta-author::before,
+.archive.author .page-header h1::before {
   content: "\f007";
+}
+
+.entry-meta-image-dimesions::before {
+  content: "\f030";
 }
 
 .entry-meta-comments::before {
@@ -928,37 +944,46 @@ body {
 .format-gallery .entry-meta-post-format::before,
 .format-image .entry-meta-post-format::before,
 .single-format-gallery .entry-header h1::before,
-.single-format-image .entry-header h1::before {
+.single-format-image .entry-header h1::before,
+.archive.term-post-format-gallery .page-header h1::before,
+.archive.term-post-format-image .page-header h1::before,
+.attachment .entry-header h1::before {
   content: "\f03e";
 }
 
 .format-audio .entry-meta-post-format::before,
-.single-format-audio .entry-header h1::before {
+.single-format-audio .entry-header h1::before,
+.archive.term-post-format-audio .page-header h1::before {
   content: "\f001";
 }
 
 .format-video .entry-meta-post-format::before,
-.single-format-video .entry-header h1::before {
+.single-format-video .entry-header h1::before,
+.archive.term-post-format-video .page-header h1::before {
   content: "\f03d";
 }
 
 .format-status .entry-meta-post-format::before,
-.single-format-status .entry-header h1::before {
+.single-format-status .entry-header h1::before,
+.archive.term-post-format-status .page-header h1::before {
   content: "\f12a";
 }
 
 .format-link .entry-meta-post-format::before,
-.single-format-link .entry-header h1::before {
+.single-format-link .entry-header h1::before,
+.archive.term-post-format-link .page-header h1::before {
   content: "\f0c1";
 }
 
 .format-quote .entry-meta-post-format::before,
-.single-format-quote .entry-header h1::before {
+.single-format-quote .entry-header h1::before,
+.archive.term-post-format-quote .page-header h1::before {
   content: "\f10e";
 }
 
 .format-chat .entry-meta-post-format::before,
-.single-format-chat .entry-header h1::before {
+.single-format-chat .entry-header h1::before,
+.archive.term-post-format-chat .page-header h1::before {
   content: "\f086";
 }
 
@@ -1197,6 +1222,11 @@ pre {
   word-wrap: normal;
 }
 
+/* quotes */
+q {
+  font-style: italic;
+}
+
 @media only screen and (max-width: 768px) {
   table {
     display: inline-block;
@@ -1428,22 +1458,14 @@ object {
 }
 
 /* 5.6 Content: Post formats */
-.single-format-gallery .entry-content,
-.single-format-image .entry-content,
-.single-format-audio .entry-content,
-.single-format-video .entry-content,
-.single-format-aside .entry-content,
-.single-format-status .entry-content,
-.single-format-link .entry-content,
-.single-format-quote .entry-content,
-.home .format-gallery,
-.home .format-image,
-.home .format-audio,
-.home .format-video,
-.home .format-aside,
-.home .format-status,
-.home .format-link,
-.home .format-quote {
+.format-gallery,
+.format-image,
+.format-audio,
+.format-video,
+.format-aside,
+.format-status,
+.format-link,
+.format-quote {
   background-color: var(--color-bg-alt);
   color: var(--color-text-alt);
   padding: 1em;
@@ -1451,127 +1473,82 @@ object {
           border-radius: .25em;
 }
 
-.single-format-gallery .entry-content a,
-.single-format-image .entry-content a,
-.single-format-audio .entry-content a,
-.single-format-video .entry-content a,
-.single-format-aside .entry-content a,
-.single-format-status .entry-content a,
-.single-format-link .entry-content a,
-.single-format-quote .entry-content a,
-.home .format-gallery a,
-.home .format-image a,
-.home .format-audio a,
-.home .format-video a,
-.home .format-aside a,
-.home .format-status a,
-.home .format-link a,
-.home .format-quote a {
+.format-gallery a,
+.format-image a,
+.format-audio a,
+.format-video a,
+.format-aside a,
+.format-status a,
+.format-link a,
+.format-quote a {
   color: var(--color-text-alt);
 }
 
-.single-format-gallery .entry-content a:hover,
-.single-format-image .entry-content a:hover,
-.single-format-audio .entry-content a:hover,
-.single-format-video .entry-content a:hover,
-.single-format-aside .entry-content a:hover,
-.single-format-status .entry-content a:hover,
-.single-format-link .entry-content a:hover,
-.single-format-quote .entry-content a:hover,
-.home .format-gallery a:hover,
-.home .format-image a:hover,
-.home .format-audio a:hover,
-.home .format-video a:hover,
-.home .format-aside a:hover,
-.home .format-status a:hover,
-.home .format-link a:hover,
-.home .format-quote a:hover {
+.format-gallery a:hover,
+.format-image a:hover,
+.format-audio a:hover,
+.format-video a:hover,
+.format-aside a:hover,
+.format-status a:hover,
+.format-link a:hover,
+.format-quote a:hover {
   color: var(--color-scheme);
 }
 
-.single-format-gallery .entry-content .page-links a,
-.single-format-image .entry-content .page-links a,
-.single-format-audio .entry-content .page-links a,
-.single-format-video .entry-content .page-links a,
-.single-format-aside .entry-content .page-links a,
-.single-format-status .entry-content .page-links a,
-.single-format-link .entry-content .page-links a,
-.single-format-quote .entry-content .page-links a,
-.home .format-gallery .page-links a,
-.home .format-image .page-links a,
-.home .format-audio .page-links a,
-.home .format-video .page-links a,
-.home .format-aside .page-links a,
-.home .format-status .page-links a,
-.home .format-link .page-links a,
-.home .format-quote .page-links a {
+.format-gallery .page-links a,
+.format-image .page-links a,
+.format-audio .page-links a,
+.format-video .page-links a,
+.format-aside .page-links a,
+.format-status .page-links a,
+.format-link .page-links a,
+.format-quote .page-links a {
   text-decoration: none;
 }
 
-.single-format-gallery .entry-content .page-links a:hover,
-.single-format-image .entry-content .page-links a:hover,
-.single-format-audio .entry-content .page-links a:hover,
-.single-format-video .entry-content .page-links a:hover,
-.single-format-aside .entry-content .page-links a:hover,
-.single-format-status .entry-content .page-links a:hover,
-.single-format-link .entry-content .page-links a:hover,
-.single-format-quote .entry-content .page-links a:hover,
-.home .format-gallery .page-links a:hover,
-.home .format-image .page-links a:hover,
-.home .format-audio .page-links a:hover,
-.home .format-video .page-links a:hover,
-.home .format-aside .page-links a:hover,
-.home .format-status .page-links a:hover,
-.home .format-link .page-links a:hover,
-.home .format-quote .page-links a:hover {
+.format-gallery .page-links a:hover,
+.format-image .page-links a:hover,
+.format-audio .page-links a:hover,
+.format-video .page-links a:hover,
+.format-aside .page-links a:hover,
+.format-status .page-links a:hover,
+.format-link .page-links a:hover,
+.format-quote .page-links a:hover {
   color: var(--color-text-alt);
 }
 
-.single-format-gallery .entry-content a,
-.single-format-image .entry-content a,
-.single-format-audio .entry-content a,
-.single-format-video .entry-content a,
-.single-format-aside .entry-content a,
-.single-format-status .entry-content a,
-.single-format-link .entry-content a,
-.single-format-quote .entry-content a,
-.single-format-chat .entry-content a,
-.home .format-gallery .entry-content a,
-.home .format-image .entry-content a,
-.home .format-audio .entry-content a,
-.home .format-video .entry-content a,
-.home .format-aside .entry-content a,
-.home .format-status .entry-content a,
-.home .format-link .entry-content a,
-.home .format-quote .entry-content a,
-.home .format-chat .entry-content a {
+.format-gallery .entry-content a,
+.format-image .entry-content a,
+.format-audio .entry-content a,
+.format-video .entry-content a,
+.format-aside .entry-content a,
+.format-status .entry-content a,
+.format-link .entry-content a,
+.format-quote .entry-content a,
+.format-chat .entry-content a {
   text-decoration: underline;
 }
 
 /* Post format: Gallery */
-.single-format-gallery .entry-content .gallery-item,
-.home .format-gallery .gallery-item {
+.format-gallery .entry-content .gallery-item {
   border: none;
   -webkit-border-radius: 0px;
           border-radius: 0px;
 }
 
-.single-format-gallery .entry-content img,
-.home .format-gallery img {
+.format-gallery .entry-content img {
   -webkit-border-radius: .25em;
           border-radius: .25em;
 }
 
 /* Post format: Image */
-.single-format-image .entry-content .wp-caption,
-.home .format-image .wp-caption {
+.format-image .entry-content .wp-caption {
   border: none;
   -webkit-border-radius: 0px;
           border-radius: 0px;
 }
 
-.single-format-image .entry-content img,
-.home .format-image img {
+.format-image .entry-content img {
   -webkit-border-radius: .25em;
           border-radius: .25em;
 }
@@ -1584,61 +1561,46 @@ object {
 }
 
 /* Post format: Aside */
-.home .format-aside .entry-meta {
+.format-aside .entry-meta {
   font-size: .8rem;
 }
 
 /* Post format: Status */
-.single-format-status .entry-content,
-.home .format-status {
+.format-status .entry-content {
   font-size: 2rem;
   font-weight: 700;
 }
 
-.single-format-status .entry-content p,
-.home .format-status .entry-content p {
+.format-status .entry-content p {
   margin: 0;
 }
 
-.home .format-status .entry-meta {
+.format-status .entry-meta {
   font-size: .8rem;
 }
 
 /* Post format: Link */
-.single-format-link .entry-content,
-.home .format-link {
+.format-link .entry-content {
   font-size: 2rem;
   font-weight: 700;
-}
-
-.single-format-link .entry-content .entry-content,
-.home .format-link .entry-content {
   text-align: center;
 }
 
-.single-format-link .entry-content,
-.home .format-link .entry-content {
-  text-align: center;
-}
-
-.single-format-link .entry-content p,
-.home .format-link .entry-content p {
+.format-link .entry-content p {
   margin: 0;
 }
 
-.single-format-quote .entry-content,
-.home .format-quote .entry-content {
+/* Post format: Quote */
+.format-quote .entry-content {
   text-align: center;
   font-size: 1.6rem;
 }
 
-.single-format-quote .entry-content p,
-.home .format-quote .entry-content p {
+.format-quote .entry-content p {
   margin: 0;
 }
 
-.single-format-quote .entry-content blockquote,
-.home .format-quote .entry-content blockquote {
+.format-quote .entry-content blockquote {
   border: none;
   padding: 0 2em;
   position: relative;
@@ -1646,22 +1608,18 @@ object {
   margin: 0;
 }
 
-.single-format-quote .entry-content blockquote::before, .single-format-quote .entry-content blockquote::after,
-.home .format-quote .entry-content blockquote::before,
-.home .format-quote .entry-content blockquote::after {
+.format-quote .entry-content blockquote::before, .format-quote .entry-content blockquote::after {
   position: absolute;
   font-size: 3rem;
 }
 
-.single-format-quote .entry-content blockquote::before,
-.home .format-quote .entry-content blockquote::before {
+.format-quote .entry-content blockquote::before {
   content: '“';
   top: 0;
   left: 0;
 }
 
-.single-format-quote .entry-content blockquote::after,
-.home .format-quote .entry-content blockquote::after {
+.format-quote .entry-content blockquote::after {
   content: '”';
   bottom: 0;
   right: 0;
@@ -1717,33 +1675,33 @@ object {
   content: '\f02b';
 }
 
-.post-navigation .nav-links {
+.nav-links {
   display: grid;
   grid-template-columns: minmax(0, 100%);
   grid-gap: 1em;
 }
 
-.post-navigation .nav-previous a span:nth-child(2),
-.post-navigation .nav-next a span:nth-child(2) {
+.nav-previous a span:nth-child(2),
+.nav-next a span:nth-child(2) {
   text-transform: uppercase;
   font-size: .8rem;
   font-weight: 600;
 }
 
-.post-navigation .nav-previous::before,
-.post-navigation .nav-next::after {
+.nav-previous::before,
+.nav-next::after {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
 }
 
-.post-navigation .nav-previous::before {
+.nav-previous::before {
   content: '\f177';
   padding-right: .5em;
 }
 
-.post-navigation .nav-next::after {
+.nav-next::after {
   content: '\f178';
   padding-left: .5em;
 }
@@ -1784,7 +1742,7 @@ object {
 }
 
 @media (min-width: 768px) {
-  .post-navigation .nav-links {
+  .nav-links {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1793,14 +1751,14 @@ object {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
-  .post-navigation .nav-previous,
-  .post-navigation .nav-next {
+  .nav-previous,
+  .nav-next {
     margin-bottom: 1em;
   }
-  .post-navigation .nav-previous {
+  .nav-previous {
     margin-right: 1em;
   }
-  .post-navigation .nav-next {
+  .nav-next {
     margin-left: auto;
     text-align: right;
   }
@@ -1823,8 +1781,8 @@ object {
   .post-tags::before {
     padding-right: 1em;
   }
-  .post-tags > *:not(:last-child) {
-    margin-right: .5em;
+  .post-tags > *:not(:first-child) {
+    margin-left: .5em;
   }
 }
 
@@ -2018,7 +1976,7 @@ object {
 }
 
 .widget ul ul {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 1em;
 }
 
 .widget li {

@@ -148,3 +148,16 @@ Font Awesome 4.6.3 by @davegandy
 
 1.5.1 - 2018.12.14
 - Added version paramater to stylesheet URL
+
+1.6.0 - 2018.12.17
+- Fixed menu items overlapping on hover
+- Fixed styling for post formats on index pages
+- Added filter for archive titles
+- Added post-thumbnail to pages
+- Fixed styling of quotes
+- Improved categories and tags logic
+- Added image.php file
+- Added image dimensions to entry meta
+- Removed table styling from editor styles
+- Fixed issues in the RTL stylesheet
+- Updated language files

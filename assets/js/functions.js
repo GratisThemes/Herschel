@@ -1,23 +1,12 @@
 ( function( window, document ) {
   
   const html         = document.querySelector( 'html' )
-  const archiveTitle = html.querySelector( '.archive .page-header h1' )
   const videos       = html.querySelectorAll( '.format-video iframe, .format-video object, .format-video embed' )
   const scrollToTop  = html.querySelector( '#scroll-to-top' )
   
   // Replace no-js class with js on html element
   html.classList.remove( 'no-js' )
   html.classList.add( 'js' )
-
-  // Remove prefix from archive titles
-  if ( archiveTitle ) {
-    const archiveTitleArr = archiveTitle.innerHTML.split(': ')
-  
-    if ( archiveTitleArr.length > 1 ) {
-      archiveTitleArr.shift()
-      archiveTitle.innerHTML = archiveTitleArr.join(': ')
-    }
-  }
 
   // Force videos 16:9 aspect ratio
   function sizeVideos() {

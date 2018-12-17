@@ -95,7 +95,21 @@ body {
 .single-format-status .entry-header h1::before,
 .single-format-link .entry-header h1::before,
 .single-format-quote .entry-header h1::before,
-.single-format-chat .entry-header h1::before {
+.single-format-chat .entry-header h1::before,
+.archive.category .page-header h1::before,
+.archive.date .page-header h1::before,
+.archive.tag .page-header h1::before,
+.archive.author .page-header h1::before,
+.archive.term-post-format-gallery .page-header h1::before,
+.archive.term-post-format-image .page-header h1::before,
+.archive.term-post-format-audio .page-header h1::before,
+.archive.term-post-format-video .page-header h1::before,
+.archive.term-post-format-status .page-header h1::before,
+.archive.term-post-format-link .page-header h1::before,
+.archive.term-post-format-quote .page-header h1::before,
+.archive.term-post-format-chat .page-header h1::before,
+.attachment .entry-header h1::before,
+.search-results .page-header h1::before {
   content: '';
   padding-right: 0;
 }
@@ -108,7 +122,21 @@ body {
 .single-format-status .entry-header h1::after,
 .single-format-link .entry-header h1::after,
 .single-format-quote .entry-header h1::after,
-.single-format-chat .entry-header h1::after {
+.single-format-chat .entry-header h1::after,
+.archive.category .page-header h1::after,
+.archive.date .page-header h1::after,
+.archive.tag .page-header h1::after,
+.archive.author .page-header h1::after,
+.archive.term-post-format-gallery .page-header h1::after,
+.archive.term-post-format-image .page-header h1::after,
+.archive.term-post-format-audio .page-header h1::after,
+.archive.term-post-format-video .page-header h1::after,
+.archive.term-post-format-status .page-header h1::after,
+.archive.term-post-format-link .page-header h1::after,
+.archive.term-post-format-quote .page-header h1::after,
+.archive.term-post-format-chat .page-header h1::after,
+.attachment .entry-header h1::after,
+.search-results .page-header h1::after {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -120,33 +148,62 @@ body {
   content: "\f24a";
 }
 
+.archive.author .page-header h1::after {
+  content: "\f007";
+}
+
 .single-format-gallery .entry-header h1::after,
-.single-format-image .entry-header h1::after {
+.single-format-image .entry-header h1::after,
+.archive.term-post-format-gallery .page-header h1::after,
+.archive.term-post-format-image .page-header h1::after,
+.attachment .entry-header h1::after {
   content: "\f03e";
 }
 
-.single-format-audio .entry-header h1::after {
+.single-format-audio .entry-header h1::after,
+.archive.term-post-format-audio .page-header h1::after {
   content: "\f001";
 }
 
-.single-format-video .entry-header h1::after {
+.single-format-video .entry-header h1::after,
+.archive.term-post-format-video .page-header h1::after {
   content: "\f03d";
 }
 
-.single-format-status .entry-header h1::after {
+.single-format-status .entry-header h1::after,
+.archive.term-post-format-status .page-header h1::after {
   content: "\f12a";
 }
 
-.single-format-link .entry-header h1::after {
+.single-format-link .entry-header h1::after,
+.archive.term-post-format-link .page-header h1::after {
   content: "\f0c1";
 }
 
-.single-format-quote .entry-header h1::after {
+.single-format-quote .entry-header h1::after,
+.archive.term-post-format-quote .page-header h1::after {
   content: "\f10e";
 }
 
-.single-format-chat .entry-header h1::after {
+.single-format-chat .entry-header h1::after,
+.archive.term-post-format-chat .page-header h1::after {
   content: "\f086";
+}
+
+.archive.category .page-header h1::after {
+  content: '\f114';
+}
+
+.archive.date .page-header h1::after {
+  content: '\f073';
+}
+
+.archive.tag .page-header h1::after {
+  content: '\f02b';
+}
+
+.search-results .page-header h1::after {
+  content: '\f002';
 }
 
 @media (min-width: 1024px) {
@@ -310,6 +367,10 @@ ol {
 }
 
 /* Widgets */
+.widget ul ul {
+  margin: 0 1em 0 0;
+}
+
 .widget_calendar #prev,
 .widget_calendar #prev + .pad {
   border-right: 1px solid var(--color-border);

@@ -26,11 +26,5 @@ body {
 
 @import "content-tags-and-elements";
 
-table,
-td,
-th {
-  border: 0.0625em solid black;
-}
-
 /* 4.0 Form elements */
 @import "content-form-elements";

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: herschel\n"
 "Report-Msgid-Bugs-To: https://github.com/GratisThemes/Fell/issues\n"
-"POT-Creation-Date: 2018-12-14 21:08+0100\n"
+"POT-Creation-Date: 2018-12-17 06:48+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: GratisThemes <gratisthemes@gmail.com>\n"
@@ -90,6 +90,14 @@ msgstr "Bunnfelt Meny"
 #: header.php:38
 msgid "Toggle menu"
 msgstr "Skjul/vis meny"
+
+#: image.php:31
+msgid "Previous Image"
+msgstr "Forrige bilde"
+
+#: image.php:32
+msgid "Next Image"
+msgstr "Neste bilde"
 
 #: inc/customizer.php:21
 msgid "Display Site Title"
@@ -203,6 +211,21 @@ msgstr "Gå til toppen ikon"
 msgid "Read more"
 msgstr "Les mer"
 
+#: inc/filters.php:76
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: inc/filters.php:78
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: inc/filters.php:80
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "F j, Y"
+
 #: inc/widget-areas.php:12
 msgid "Header"
 msgstr "Toppfelt"
@@ -281,14 +304,14 @@ msgid "%1$s @ %2$s"
 msgstr "%1$s @ %2$s"
 
 #: template-parts/content-aside.php:33 template-parts/content-page.php:18
-#: template-parts/content-status.php:33 template-parts/entry-header.php:88
+#: template-parts/content-status.php:33 template-parts/entry-header.php:95
 msgid "Edit"
 msgstr "Rediger"
 
 #: template-parts/content-aside.php:48 template-parts/content-audio.php:46
 #: template-parts/content-chat.php:30 template-parts/content-gallery.php:38
 #: template-parts/content-image.php:30 template-parts/content-link.php:48
-#: template-parts/content-page.php:31 template-parts/content-quote.php:32
+#: template-parts/content-page.php:37 template-parts/content-quote.php:32
 #: template-parts/content-status.php:61 template-parts/content-video.php:46
 #: template-parts/content.php:31
 msgid "Pages:"
@@ -305,15 +328,15 @@ msgstr ""
 msgid "Author"
 msgstr "Forfatter"
 
-#: template-parts/entry-footer.php:35
+#: template-parts/entry-footer.php:34
 msgid "tags"
 msgstr "stikkord"
 
-#: template-parts/entry-footer.php:45
+#: template-parts/entry-footer.php:41
 msgid "Previous post"
 msgstr "Forige post"
 
-#: template-parts/entry-footer.php:48
+#: template-parts/entry-footer.php:44
 msgid "Next post"
 msgstr "Neste post"
 
