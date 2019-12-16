@@ -68,3 +68,8 @@ assets/icons/font-awesome/
 
 # Releases
 releases/
+
+# Preprocessed CSS
+editor-styles.css
+rtl.css
+style.css
