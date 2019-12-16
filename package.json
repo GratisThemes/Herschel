@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/GratisThemes/Herschel#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-plumber": "^1.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-sort": "^2.0.0",
-    "gulp-wp-pot": "^2.3.3",
-    "gulp-zip": "^4.2.0"
+    "gulp-wp-pot": "^2.3.5",
+    "gulp-zip": "^5.0.1"
   }
 }
