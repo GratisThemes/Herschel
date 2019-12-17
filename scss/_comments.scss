@@ -35,11 +35,10 @@
 }
 
 .comment.bypostauthor .comment-author .fn::before {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   text-decoration: inherit;
-  content: '\f040';
+  content: '\f303';
   padding-right: .5em;
 }
 
@@ -102,19 +101,18 @@
 
   .nav-previous::before,
   .nav-next::after {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     text-decoration: inherit;
   }
 
   .nav-previous::before {
-    content: '\f177';
+    content: '\f30a';
     padding-right: .5em;
   }
 
   .nav-next::after {
-    content: '\f178';
+    content: '\f30b';
     padding-left: .5em;
   }
 }

@@ -50,15 +50,14 @@
 .archive.term-post-format-chat .page-header h1::before,
 .attachment .entry-header h1::before,
 .search-results .page-header h1::before {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   text-decoration: inherit;
   padding-right: .5em;
 }
 
 .sticky .entry-header h3::before {
-  content: "\f24a"    
+  content: "\f249" 
 }
 
 .entry-meta {
@@ -66,9 +65,8 @@
   font-size: .85rem;
 
   > *::before {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     text-decoration: inherit;
     font-size: .85rem;
     display: inline-block;
@@ -86,11 +84,11 @@
 }
 
 .entry-meta-image-dimesions::before {
-  content: "\f030";  
+  content: "\f030";
 }
 
 .entry-meta-comments::before {
-  content: "\f0e5";
+  content: "\f075";
 }
 
 .format-gallery .entry-meta-post-format::before,
@@ -140,7 +138,7 @@
 }
 
 .archive.category .page-header h1::before {
-  content: '\f114';
+  content: '\f07b';
 }
 
 .archive.date .page-header h1::before {
@@ -165,16 +163,16 @@
   }
 
   &::before {
-    content: "\f114";
+    content: "\f07b";
   }
 }
 
 .post-edit-link::before {
-  content: "\f040";
+  content: "\f303";
 }
 
 .entry-meta-tags::before {
-  content: "\f007";
+  content: "\f02b";
 }
 
 @media (min-width: 1024px) {

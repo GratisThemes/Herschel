@@ -3,18 +3,29 @@
  * Scripts, styles and fonts
  *
  * @package Herschel
- * @since 1.0.0
+ * @since   1.0.0
  * @version 1.5.0 [Removed jQuery from theme js file]
  * @version 1.5.0 [Modified custom CSS options]
  * @version 1.5.1 [Added version paramater to stylesheet URL]
+ * @version 1.7.0 [Updated Font Awesome from 4.6.3 to 5.11.2]
  */
 function herschel_scripts() {
 
   // Fonts from google
-  wp_enqueue_style( 'herschel-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i', array(), null);
+  wp_enqueue_style(
+    'herschel-fonts',
+    'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i',
+    array(),
+    null
+  );
 
   // Font Awesome
-  wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/icons/font-awesome/css/font-awesome.min.css', array(), '4.6.3');
+  wp_enqueue_style(
+    "font-awesome",
+    get_template_directory_uri() . "/assets/icons/font-awesome/css/all.min.css",
+    array(),
+    "5.11.2"
+  );
 
   // Theme stylesheet
   wp_enqueue_style( 'herschel-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version') );

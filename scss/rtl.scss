@@ -56,9 +56,8 @@ body {
     }
 
     li.menu-item-has-children > a::before {
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
       text-decoration: inherit;
       font-size: 1rem;
       padding-right: .5em;
@@ -140,15 +139,14 @@ body {
 .archive.term-post-format-chat .page-header h1::after,
 .attachment .entry-header h1::after,
 .search-results .page-header h1::after {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   text-decoration: inherit;
   padding-left: .5em;
 }
 
 .sticky .entry-header h3::after {
-  content: "\f24a"    
+  content: "\f249"    
 }
 
 .archive.author .page-header h1::after {
@@ -194,7 +192,7 @@ body {
 }
 
 .archive.category .page-header h1::after {
-  content: '\f114';
+  content: '\f07b';
 }
 
 .archive.date .page-header h1::after {
@@ -273,19 +271,18 @@ ol {
 
   .nav-previous::after,
   .nav-next::before {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     text-decoration: inherit;
   }
 
   .nav-previous::after {
-    content: '\f177';
+    content: '\f30a';
     padding-left: .5em;
   }
 
   .nav-next::before {
-    content: '\f178';
+    content: '\f30b';
     padding-right: .5em;
   }
 }
@@ -328,11 +325,10 @@ ol {
   padding: 0;
 }
 .comment.bypostauthor .comment-author .fn::after {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   text-decoration: inherit;
-  content: '\f040';
+  content: '\f303';
   padding-left: .5em;
 }
 
@@ -357,19 +353,18 @@ ol {
 
   .nav-previous::after,
   .nav-next::before {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     text-decoration: inherit;
   }
 
   .nav-previous::after {
-    content: '\f177';
+    content: '\f30a';
     padding-left: .5em;
   }
 
   .nav-next::before {
-    content: '\f178';
+    content: '\f30b';
     padding-right: .5em;
   }
 }

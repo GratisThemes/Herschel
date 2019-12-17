@@ -4,8 +4,9 @@
  * Displays all of the head element and everything up until the content.
  *
  * @package Herschel
- * @since 1.0.0
+ * @since   1.0.0
  * @version 1.5.0
+ * @version 1.7.0 []
  */
 ?>
 <!DOCTYPE html>
@@ -33,8 +34,8 @@
           <input type="checkbox" id="header-nav-toggle" />
 
           <label for="header-nav-toggle" id="header-nav-toggle-label">
-            <i class="fa fa-bars"></i>
-            <i class="fa fa-times"></i>
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
             <span class="screen-reader-text"><?php _e( 'Toggle menu', 'herschel' ); ?></span>
           </label><!-- #header-nav-toggle-label -->
         <?php endif; ?>
