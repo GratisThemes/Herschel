@@ -12,6 +12,7 @@ if ( !function_exists( 'herschel_setup' ) ) {
    * @since  1.0.0
    * @version 1.5.0 [Removed font being added to editor style]
    * @version 1.7.0 [Added support for alignwide and alignfull styles]
+   * @version 1.7.0 [Added support for responsive embeds]
    */
   function herschel_setup() {
     // Support for translation files
@@ -80,6 +81,9 @@ if ( !function_exists( 'herschel_setup' ) ) {
 
     // Add support for full and wide align images.
     add_theme_support( "align-wide" );
+
+    // Add support for responsive embedded content.
+    add_theme_support( "responsive-embeds" );
 
     // Editor styles for TinyMCE and Gutenberg
     add_theme_support( 'editor-styles' );
