@@ -9,10 +9,11 @@ if ( !function_exists( 'herschel_setup' ) ) {
   /**
    * Set up theme defaults and registers support for various WordPress features
    *
-   * @since  1.0.0
+   * @since   1.0.0
    * @version 1.5.0 [Removed font being added to editor style]
    * @version 1.7.0 [Added support for alignwide and alignfull styles]
    * @version 1.7.0 [Added support for responsive embeds]
+   * @version 1.7.0 [Added support for block styles]
    */
   function herschel_setup() {
     // Support for translation files
@@ -84,6 +85,9 @@ if ( !function_exists( 'herschel_setup' ) ) {
 
     // Add support for responsive embedded content.
     add_theme_support( "responsive-embeds" );
+
+    // Add support for Block Styles.
+    add_theme_support( "wp-block-styles" );
 
     // Editor styles for TinyMCE and Gutenberg
     add_theme_support( 'editor-styles' );

@@ -20,23 +20,24 @@
   margin-bottom: .5em;
 }
 
-.widget {
+.widget ul,
+.wp-block-archives-list,
+.wp-block-categories-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
   ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-
-    ul {
-      margin: 0 0 0 1em;
-    }
+    margin: 0 0 0 1em;
   }
+}
 
+.widget,
+.wp-block-archives-list,
+.wp-block-categories-list {
   li {
     line-height: 2em;
-  }
-
-  > ul > li {
-    border-bottom: 0.0625em solid var(--color-border);    
   }
 
   a {
@@ -47,6 +48,12 @@
       text-decoration: none;
     }
   }
+}
+
+.widget > ul > li,
+.wp-block-archives-list > li,
+.wp-block-categories-list > li {
+  border-bottom: 0.0625em solid var(--color-border);  
 }
 
 .widget_calendar {
