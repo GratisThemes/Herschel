@@ -52,7 +52,10 @@ h6 {
 /* Paragraph tag */
 p {
   line-height: 1.5em;
-  margin: 0 0 1.5em;
+}
+
+.entry-content > p {
+  margin: 0 0 1em;  
 }
 
 blockquote {

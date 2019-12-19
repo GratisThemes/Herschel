@@ -62,9 +62,9 @@
   }
 
   body.has-sidebar .alignfull {
-    width: calc(50% - 150px + 50vw - 1em);
-    max-width: calc(50% - 150px + 50vw - 1em);
-    margin-left: calc(50% + 150px - 50vw + 1em);
+    width: calc(50% - 150px + 50vw - 1.5em);
+    max-width: calc(50% - 150px + 50vw - 1.5em);
+    margin-left: calc(50% + 150px - 50vw + 1.5em);
   }
 
   body.has-sidebar.has-social-icons .alignfull {

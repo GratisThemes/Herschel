@@ -7,15 +7,20 @@
   display: grid;
   grid-template-columns: minmax(0, 100%);
   align-content: start;
-  grid-gap: 2em;
 }
 
-#site-main {
-  min-height: 100vh
+#site-main,
+.single #site-main > section,
+.page #site-main > section {
+  grid-gap: 2em;
 }
 
 #site-main > section {
   grid-gap: 1em;
+}
+
+#site-main {
+  min-height: 100vh
 }
 
 @media (min-width: 768px) {
@@ -39,9 +44,9 @@
   #main-content-container {
     display: grid;
     grid-template-columns: minmax(0, auto) minmax(320px, 1200px) minmax(0, auto);
-    grid-gap: 1em;
+    grid-gap: 2em;
     padding: 0;
-    margin: 1em 0;
+    margin: 2em 0;
   }
 
   #site-main {
