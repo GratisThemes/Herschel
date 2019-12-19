@@ -24,13 +24,33 @@
 }
 
 .post-tags {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
 
-  &::before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    text-decoration: inherit;
-    content: '\f02b';
+  a {
+    background-color: var(--color-scheme);
+    color: var(--color-bg);
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    transition: filter 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin: 0 0.5em 0.5em 0;
+    }
+
+    &:hover {
+      filter: brightness(110%);
+      text-decoration: none;
+    }
+
+    &::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      text-decoration: inherit;
+      content: '\f02b';
+      padding-right: 0.5em;
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -117,18 +137,5 @@
   .author-bio {
     display: grid;
     grid-template-columns: 50px minmax(0, 1fr);
-  }
-
-  .post-tags {
-    display: flex;
-    flex-wrap: wrap;
-
-    &::before {
-      padding-right: 1em;
-    }
-
-    > *:not(:first-child) {
-      margin-left: .5em;
-    }
   }
 }

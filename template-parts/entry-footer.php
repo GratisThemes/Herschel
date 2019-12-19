@@ -3,7 +3,8 @@
  * Template for displaying entry footers
  *
  * @package Herschel
- * @since 1.5.0
+ * @since   1.5.0
+ * @version 1.7.0 [Improved post tags styles]
  */
 ?>
 <footer class="entry-footer">
@@ -30,7 +31,7 @@
   <?php
   if ( has_tag() && get_theme_mod( 'entry_meta_tags', true ) ): ?>
     <div class="post-tags">
-      <?php the_tags('', ', '); ?>
+      <?php the_tags('', ''); ?>
       <span class="screen-reader-text"><?php _e( 'tags', 'herschel'); ?></span>
     </div><!-- .post-tags -->
   <?php endif; ?>
