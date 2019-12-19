@@ -23,10 +23,12 @@ body {
 }
 
 .page-links {
+  font-size: .8rem;
+
   > * {
     border: 0.0625em solid var(--color-scheme);
-    margin-left: .5em;
-    padding: .1em .25em;
+    margin-left: .25em;
+    padding: .1em .45em;
     border-radius: .15em;
   }
 
@@ -39,9 +41,5 @@ body {
       text-decoration: none;
       filter: brightness(110%);
     }
-  }
-
-  > span {
-    font-weight: 600;
   }
 }

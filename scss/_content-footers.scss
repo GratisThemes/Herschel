@@ -99,7 +99,11 @@
 .pagination .nav-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+
+  > *:not(:last-child) {
+    margin-right: .5em;
+  }
 
   .page-numbers {
     padding: .1em .25em;
@@ -126,6 +130,12 @@
   .nav-links {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .pagination .nav-links {
+    > *:not(:last-child) {
+     margin-right: 1em;
+    }
   }
 
   .nav-previous,
