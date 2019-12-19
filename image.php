@@ -3,7 +3,8 @@
  * Template for displaying images
  *
  * @package Herschel
- * @since 1.6.0
+ * @since   1.6.0
+ * @version 1.7.0 [Improved attachment navigation]
  */
 ?>
 
@@ -28,8 +29,12 @@
 
       <footer class="entry-footer">
         <div class="nav-links image-navigation">
-          <div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'herschel' ) ); ?></div>
-          <div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'herschel' ) ); ?></div>
+          <div class="nav-previous">
+            <?php previous_image_link( false, '<span>' . __( 'Previous Image', 'herschel' ) . '</span>' ); ?>
+          </div>
+          <div class="nav-next">
+            <?php next_image_link( false, '<span>' . __( 'Next Image', 'herschel' ) . '</span>' ); ?>
+          </div>
         </div><!-- .nav-links -->
       </footer><!-- .entry-footer -->
 
