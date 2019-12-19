@@ -45,26 +45,24 @@
 }
 
 #scroll-to-top {
-  background-color: var(--color-bg);
-  border: 0.0625em solid var(--color-scheme);
+  background-color: var(--color-scheme);
   position: fixed;
   bottom : -2000px;
   right: 1em;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 1.8rem;
+  height: 1.8rem;
   border-radius: .25em;
   overflow: hidden;
-  transition: bottom 1s ease-in-out, background-color .3s ease-in-out;
+  transition: bottom 1s ease-in-out, filter .3s ease-in-out;
 
   &::before,
   &::after {
-    background-color: var(--color-scheme);
+    background-color: var(--color-bg);
     position: absolute;
     content: "";
     width: 43%;
     height: 2px;
-    transition: background-color .3s ease-in-out;
   }
 
   &::before {
@@ -81,7 +79,7 @@
 
   &:hover,
   &:focus {
-    background-color: var(--color-bg-alt);
+    filter: brightness(110%);
   }
 }
 
