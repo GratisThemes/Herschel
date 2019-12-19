@@ -112,7 +112,8 @@ a {
   text-decoration: none;
   transition: all .3s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: underline;
   }
 }

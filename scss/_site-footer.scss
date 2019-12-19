@@ -11,7 +11,8 @@
   a {
     color: #DDDDDD;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--color-scheme);
       text-decoration: none;
     }
@@ -78,7 +79,8 @@
     transform: rotate(-45deg);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--color-bg-alt);
   }
 }

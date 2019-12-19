@@ -74,7 +74,8 @@
     font-size: 30px;
     text-align: center;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--color-scheme);
     }
   }
@@ -106,11 +107,13 @@
       }
     
       &.current-menu-item,
-      &:hover {
+      &:hover,
+      &:focus-within {
         background-color: var(--color-bg-alt);
       }
 
-      &:hover > ul { 
+      &:hover > ul,
+      &:focus-within > ul { 
         display: block;
       }
     }
@@ -153,7 +156,8 @@
       left: calc(100% - 2em);
     }
 
-    li:hover > ul {
+    li:hover > ul,
+    li:focus-within > ul {
       display: block;
     }
   }

@@ -15,7 +15,8 @@ body {
   top: 1em;
   transition: filter .3s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
     filter: brightness(110%);
   }
@@ -33,7 +34,8 @@ body {
     background-color: var(--color-scheme);
     color: var(--color-text-alt);
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
       filter: brightness(110%);
     }

@@ -84,7 +84,8 @@
     background-color: var(--color-scheme);
     color: var(--color-text-alt);
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
       filter: brightness(110%);
     }

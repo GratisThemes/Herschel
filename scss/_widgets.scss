@@ -6,7 +6,8 @@
   a {
     color: var(--color-text-alt);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--color-scheme);
     }
   }
@@ -43,7 +44,8 @@
   a {
     color: var(--color-text);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--color-scheme);
       text-decoration: none;
     }

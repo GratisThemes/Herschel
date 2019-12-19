@@ -66,7 +66,8 @@
   border-radius: .15em;
   padding: 0 .25em;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
     filter: brightness(110%);
   }
