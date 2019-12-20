@@ -89,31 +89,4 @@
 
 .comment-navigation {
   margin: 1em 0;
-
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .nav-previous {
-    padding: 0 1em 1em 0;
-  }
-
-  .nav-previous::before,
-  .nav-next::after {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    text-decoration: inherit;
-  }
-
-  .nav-previous::before {
-    content: '\f30a';
-    padding-right: .5em;
-  }
-
-  .nav-next::after {
-    content: '\f30b';
-    padding-left: .5em;
-  }
 }
