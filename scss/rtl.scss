@@ -90,14 +90,6 @@ body {
 
 /* Content: Headers */
 .sticky .entry-header h3::before,
-.single-format-gallery .entry-header h1::before,
-.single-format-image .entry-header h1::before,
-.single-format-audio .entry-header h1::before,
-.single-format-video .entry-header h1::before,
-.single-format-status .entry-header h1::before,
-.single-format-link .entry-header h1::before,
-.single-format-quote .entry-header h1::before,
-.single-format-chat .entry-header h1::before,
 .archive.category .page-header h1::before,
 .archive.date .page-header h1::before,
 .archive.tag .page-header h1::before,
@@ -117,14 +109,6 @@ body {
 }
 
 .sticky .entry-header h3::after,
-.single-format-gallery .entry-header h1::after,
-.single-format-image .entry-header h1::after,
-.single-format-audio .entry-header h1::after,
-.single-format-video .entry-header h1::after,
-.single-format-status .entry-header h1::after,
-.single-format-link .entry-header h1::after,
-.single-format-quote .entry-header h1::after,
-.single-format-chat .entry-header h1::after,
 .archive.category .page-header h1::after,
 .archive.date .page-header h1::after,
 .archive.tag .page-header h1::after,
@@ -153,40 +137,32 @@ body {
   content: "\f007";
 }
 
-.single-format-gallery .entry-header h1::after,
-.single-format-image .entry-header h1::after,
 .archive.term-post-format-gallery .page-header h1::after,
 .archive.term-post-format-image .page-header h1::after,
 .attachment .entry-header h1::after {
   content: "\f03e";
 }
 
-.single-format-audio .entry-header h1::after,
 .archive.term-post-format-audio .page-header h1::after {
   content: "\f001";
 }
 
-.single-format-video .entry-header h1::after,
 .archive.term-post-format-video .page-header h1::after {
   content: "\f03d";
 }
 
-.single-format-status .entry-header h1::after,
 .archive.term-post-format-status .page-header h1::after {
   content: "\f12a";
 }
 
-.single-format-link .entry-header h1::after,
 .archive.term-post-format-link .page-header h1::after  {
   content: "\f0c1";
 }
 
-.single-format-quote .entry-header h1::after,
 .archive.term-post-format-quote .page-header h1::after  {
   content: "\f10e";
 }
 
-.single-format-chat .entry-header h1::after,
 .archive.term-post-format-chat .page-header h1::after  {
   content: "\f086";
 }
@@ -262,56 +238,67 @@ ol {
 }
 
 /* Content: Footers */
-.post-navigation {
-  .nav-previous::before,
-  .nav-next::after {
-    content: '';
-    padding: 0;
-  }
+.nav-previous a::before,
+.nav-next a::after {
+  content: '';
+  padding: 0;
+}
 
-  .nav-previous::after,
-  .nav-next::before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    text-decoration: inherit;
-  }
+.nav-previous a::after,
+.nav-next a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  text-decoration: inherit;
+  color: var(--color-text);
+}
 
-  .nav-previous::after {
-    content: '\f30a';
-    padding-left: .5em;
-  }
+.nav-previous a::after {
+  content: '\f30a';
+  padding-left: .5em;
+}
 
-  .nav-next::before {
-    content: '\f30b';
-    padding-right: .5em;
+.nav-next a::before {
+  content: '\f30b';
+  padding-right: .5em;
+}
+
+.pagination .nav-links {
+  > *:not(:last-child) {
+    margin-right: 0;
+    margin-left: .5em;
   }
 }
 
 @media (min-width: 768px) {
-  .post-navigation {
-    .nav-previous {
-      margin-right: 0;
-      margin-left: 1em;
-    }
+  .nav-previous {
+    margin-right: 0;
+    margin-left: 1em;
+  }
 
-    .nav-next {
-      margin-left: 0;
-      margin-right: auto;
-      text-align: left;
-    }
+  .nav-next {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
   }
 }
 
-@media (min-width: 1024px) {
-  .post-tags {
-    &::before {
-      padding: 0;
-    }
+.post-tags a {
+  &:not(:last-child) {
+    margin: 0 0 0.5em 0.5em;
+  }
 
-    > * {
-      margin-left: 0;
-      margin-right: .5em;
-    }
+  &::before {
+    content: '';
+    padding: 0;
+  }
+
+  &::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    text-decoration: inherit;
+    content: '\f02b';
+    padding-left: 0.5em;
+    font-size: 0.8rem;
   }
 }
 
@@ -324,6 +311,7 @@ ol {
   content: '';
   padding: 0;
 }
+
 .comment.bypostauthor .comment-author .fn::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
@@ -337,35 +325,6 @@ ol {
     float: right;
     margin-right: 0;
     margin-left: .5em;
-  }
-}
-
-.comment-navigation {
-  .nav-previous {
-    padding: 0 0 1em 1em;
-  }
-
-  .nav-previous::before,
-  .nav-next::after {
-    content: '';
-    padding: 0;
-  }
-
-  .nav-previous::after,
-  .nav-next::before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    text-decoration: inherit;
-  }
-
-  .nav-previous::after {
-    content: '\f30a';
-    padding-left: .5em;
-  }
-
-  .nav-next::before {
-    content: '\f30b';
-    padding-right: .5em;
   }
 }
 
