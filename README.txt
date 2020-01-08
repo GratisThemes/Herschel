@@ -36,6 +36,9 @@ Font Awesome 5.11.2
 
 #Versions
 
+1.7.1 - 2020.01.08
+- Fixed line endings
+
 1.7.0 - 2020.01.08
 - Added support for alignwide and alignfull styles
 - Added support for responsive embeds
