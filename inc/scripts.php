@@ -8,6 +8,7 @@
  * @version 1.5.0 [Modified custom CSS options]
  * @version 1.5.1 [Added version paramater to stylesheet URL]
  * @version 1.7.0 [Updated Font Awesome from 4.6.3 to 5.11.2]
+ * @version 1.7.0 [Added support for the Gutenberg editor]
  */
 function herschel_scripts() {
 
@@ -67,3 +68,34 @@ function herschel_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'herschel_scripts' );
+
+/** 
+ * Block editor styles
+ *
+ * @package Herschel
+ * @since   1.7.0
+ */
+function herschel_block_editor_style() {
+  wp_enqueue_style(
+    'herschel_block_editor_style',
+    get_theme_file_uri( '/block-editor-style.css' ),
+    false,
+    wp_get_theme()->get('Version'),
+    'all'
+  );
+
+  // Custom options
+  $options = [
+    get_theme_mod( 'color_scheme', '#e00000' )
+  ];
+
+  $css = '
+    .editor-styles-wrapper {
+      --color-scheme: %1$s !important;
+    }
+  ';
+  
+  wp_add_inline_style( 'herschel_block_editor_style', vsprintf( $css, $options ) );
+
+}
+add_action( 'enqueue_block_editor_assets', 'herschel_block_editor_style' );

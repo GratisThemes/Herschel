@@ -71,5 +71,6 @@ releases/
 
 # Preprocessed CSS
 editor-style.css
+block-editor-style.css
 rtl.css
 style.css

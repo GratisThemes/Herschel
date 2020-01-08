@@ -1,3 +1,13 @@
+.wp-block-cover-image,
+.wp-block-cover  {
+  height: auto;
+}
+
+.wp-block-cover-text {
+  margin: 0 auto;
+  padding: 0;
+}
+
 .wp-block-image {
   figure,
   figcaption {
@@ -28,7 +38,6 @@
 .wp-block-button__link,
 .wp-block-file a.wp-block-file__button {
   background-color: var(--color-scheme);
-  border: 0.0625em solid var(--color-scheme);
   border-radius: .25em;
 
   &:hover,
@@ -89,8 +98,14 @@
 }
 
 .wp-block-quote {
-  border-color: var(--color-border);
-  border-width: 0.125em;
+  border-left: 0.125em solid var(--color-border);
+}
+
+.wp-block-quote.has-text-align-right {
+  border-left: 0;
+  border-right: 0.125em solid var(--color-border);
+  padding-left: 0;
+  padding-right: 1em;
 }
 
 .wp-block-pullquote {
