@@ -1,30 +1,82 @@
 @charset "UTF-8";
 /*
   Theme Name: Herschel
-  Description: Used to style the TinyMCE and Gutenberg editors.
+  Description: Used to style the TinyMCE editor.
 */
 
 /* Table of Contents
   -------------------------------
-  1.0 Normalize
-  2.0 Variables
-  3.0 Tags and Elements
-  4.0 Form elements
+  # Font
+  # Variables
+  # Content
+    ## Tags and Elements
+    ## Media
+    ## Alignment
 */
 
-/* 1.0 Normalize */
-@import "normalize";
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
-/* 2.0 Variables */
+/* Variables */
 @import "variables";
 
-/* 3.0 Tags and Elements */
+/* Content: Tags and Elements */
 body {
   font-family: var(--font-family);
-  margin: 1em;
 }
 
 @import "content-tags-and-elements";
 
-/* 4.0 Form elements */
-@import "content-form-elements";
+/* Content: Media */
+@import "content-media";
+
+.wp-caption-dt,
+.wp-caption-dd {
+  border: 0.0625em solid var(--color-border);
+  border-radius: .25em;
+}
+
+.wp-caption-dd {
+  padding: 1em 0;
+}
+
+.gallery {
+  br {
+    display: none;
+  }
+}
+
+.gallery .gallery-item {
+  float: none;
+  text-align: center;
+  padding: 0;
+  border: none;
+}
+
+.gallery .gallery-caption {
+  font-size: 1rem;
+}
+
+.gallery-columns-1,
+.gallery-columns-2,
+.gallery-columns-3,
+.gallery-columns-4,
+.gallery-columns-5,
+.gallery-columns-6,
+.gallery-columns-7,
+.gallery-columns-8,
+.gallery-columns-9,
+.gallery-columns-10 { 
+  .gallery-item {
+    width: auto;
+  }
+}
+
+/* Content: alignment */
+@import "content-alignment";
+
+.alignfull {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
