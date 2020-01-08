@@ -1,4 +1,4 @@
-# Copyright (C) 2018 herschel
+# Copyright (C) 2020 herschel
 # This file is distributed under the same license as the herschel package.
 msgid ""
 msgstr ""
@@ -6,9 +6,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language-Team: GratisThemes <gratisthemes@gmail.com>\n"
-"Last-Translator: GratisThemes <gratisthemes@gmail.com>\n"
-"Report-Msgid-Bugs-To: https://github.com/GratisThemes/Fell/issues\n"
+"Language-Team: Gratis Themes <gratisthemes@gmail.com>\n"
+"Last-Translator: Gratis Themes <gratisthemes@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://github.com/GratisThemes/Herschel/issues\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -71,23 +71,23 @@ msgstr ""
 msgid "Scroll to the top"
 msgstr ""
 
-#: functions.php:86
+#: functions.php:103
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:87
+#: functions.php:104
 msgid "Footer Menu"
 msgstr ""
 
-#: header.php:38
+#: header.php:39
 msgid "Toggle menu"
 msgstr ""
 
-#: image.php:31
+#: image.php:33
 msgid "Previous Image"
 msgstr ""
 
-#: image.php:32
+#: image.php:36
 msgid "Next Image"
 msgstr ""
 
@@ -305,19 +305,19 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/entry-footer.php:15
+#: template-parts/entry-footer.php:16
 msgid "Author"
 msgstr ""
 
-#: template-parts/entry-footer.php:34
+#: template-parts/entry-footer.php:35
 msgid "tags"
 msgstr ""
 
-#: template-parts/entry-footer.php:41
+#: template-parts/entry-footer.php:42
 msgid "Previous post"
 msgstr ""
 
-#: template-parts/entry-footer.php:44
+#: template-parts/entry-footer.php:45
 msgid "Next post"
 msgstr ""
 

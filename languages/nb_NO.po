@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: herschel\n"
 "Report-Msgid-Bugs-To: https://github.com/GratisThemes/Fell/issues\n"
-"POT-Creation-Date: 2018-12-17 06:48+0100\n"
+"POT-Creation-Date: 2020-01-08 02:26+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: GratisThemes <gratisthemes@gmail.com>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -79,23 +79,23 @@ msgstr "Tema: %s"
 msgid "Scroll to the top"
 msgstr "Gå til toppen"
 
-#: functions.php:86
+#: functions.php:103
 msgid "Header Menu"
 msgstr "Toppfelt meny"
 
-#: functions.php:87
+#: functions.php:104
 msgid "Footer Menu"
 msgstr "Bunnfelt Meny"
 
-#: header.php:38
+#: header.php:39
 msgid "Toggle menu"
 msgstr "Skjul/vis meny"
 
-#: image.php:31
+#: image.php:33
 msgid "Previous Image"
 msgstr "Forrige bilde"
 
-#: image.php:32
+#: image.php:36
 msgid "Next Image"
 msgstr "Neste bilde"
 
@@ -324,19 +324,19 @@ msgid ""
 msgstr ""
 "Ingenting ble funnet. Bruk søkefeltet eller menyen for å finne innholdet."
 
-#: template-parts/entry-footer.php:15
+#: template-parts/entry-footer.php:16
 msgid "Author"
 msgstr "Forfatter"
 
-#: template-parts/entry-footer.php:34
+#: template-parts/entry-footer.php:35
 msgid "tags"
 msgstr "stikkord"
 
-#: template-parts/entry-footer.php:41
+#: template-parts/entry-footer.php:42
 msgid "Previous post"
 msgstr "Forige post"
 
-#: template-parts/entry-footer.php:44
+#: template-parts/entry-footer.php:45
 msgid "Next post"
 msgstr "Neste post"
 
