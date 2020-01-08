@@ -23,6 +23,10 @@
   min-height: 100vh
 }
 
+.entry-content > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
 @media (min-width: 768px) {
   .layout-condensed #site-main {
     grid-template-columns: repeat(2, minmax(0, 100%));
