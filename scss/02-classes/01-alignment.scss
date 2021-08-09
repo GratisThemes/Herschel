@@ -1,0 +1,45 @@
+/* Classes: Alignment */
+.alignright{
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.alignleft{
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.aligncenter{ 
+  display: block; 
+  margin: 0 auto 1em;
+  text-align: center;
+}
+
+.alignwide {
+  width: calc(100% + 2rem);
+  max-width: calc(100% + 2rem);
+  margin: 0 auto 1em -1rem;
+}
+
+.alignfull {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100vw;
+  
+  img {
+    border-radius: 0;
+  }
+}
+
+body.has-sidebar .alignfull {
+  @media (min-width: $screen_laptop) {
+    margin-left: calc(((100% + #{$screen_phone} + 2rem) / 2) - 50vw);
+  }
+}
+
+/* Clear floats */
+.entry-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -4,7 +4,7 @@ Author: Gratis Themes (https://github.com/GratisThemes)
 License: GNU General Public License v3
 
 # Copyright
-Herschel WordPress Theme, Copyright (C) 2016-2020, Gratis Themes
+Herschel WordPress Theme, Copyright (C) 2016-2021, Gratis Themes
 Herschel is distributed under the terms of the GNU GPL v3
 
 This program is free software: you can redistribute it and/or modify
@@ -23,18 +23,36 @@ GNU General Public License for more details.
 # The theme bundles the following third-party resources:
 
 normalize.css v8.0.1
-  License: MIT
-  Source: github.com/necolas/normalize.css
+License: MIT
+Source: github.com/necolas/normalize.css
 
-Font Awesome 5.11.2
-  Icons License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
-  Fonts License: SIL OFL 1.1 https://scripts.sil.org/OFL
-  Code License: MIT https://opensource.org/licenses/MIT
-  Source: https://fontawesome.com
+Font Awesome 5.15.3
+  Font License
+    License: SIL OFL 1.1
+    URL: http://scripts.sil.org/OFL
+
+  Code License
+    License: MIT License
+    URL: http://opensource.org/licenses/mit-license.html
+
+  Icons License
+    License: CC BY 4.0 License
+    URL: https://creativecommons.org/licenses/by/4.0/
+
+-----------------------------------------------------------------------------
+
+# Fonts
+
+Open Sans
+https://fonts.google.com/specimen/Open+Sans
+License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
 
 -----------------------------------------------------------------------------
 
 #Versions
+
+2.0.0 - 2021.08.09
+Rewwritten from the ground up Herschel 2.0 aims to capture the original vision of the theme, but with a cleaner approach.
 
 1.7.1 - 2020.01.08
 - Fixed line endings

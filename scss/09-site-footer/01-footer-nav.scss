@@ -1,0 +1,20 @@
+/* 5.2 Site footer: Footer nav */
+.site-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style: none;
+  font-size: .85rem;
+  gap: 0 1em;
+
+  > *::before {
+    content: '//';
+    margin-inline-end: .25em;
+  }
+
+  a:hover {
+    color: var(--anchor-color);
+    text-decoration: none;
+  }
+
+}

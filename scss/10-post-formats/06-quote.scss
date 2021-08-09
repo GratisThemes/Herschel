@@ -1,0 +1,17 @@
+/* Post formats: Quote*/
+body:not(.single) article.format-quote .entry-content {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+
+  blockquote {
+    margin-block-end: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    &::before {
+      font-size: 3rem;
+    }
+  }
+}

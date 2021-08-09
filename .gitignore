@@ -64,13 +64,8 @@ typings/
 package-lock.json
 
 # included libs
-assets/icons/font-awesome/
+assets/icons/
 
 # Releases
 releases/
 
-# Preprocessed CSS
-editor-style.css
-block-editor-style.css
-rtl.css
-style.css

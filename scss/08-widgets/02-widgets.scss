@@ -1,0 +1,169 @@
+/* Widgets: Widgets */
+.widget-title {
+  font-size: 1.7rem;
+  margin: 0;
+  margin-block: 0 .5em;
+
+  @media (min-width: $screen_large_phone) {
+    font-size: 2rem;
+  }
+}
+
+.widget {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    ul {
+      margin-inline-start: 1em;
+    }
+  }
+
+  .wp-caption p {
+    margin: 0;
+  }
+}
+
+.widget_archive,
+.widget_categories,
+.widget_pages,
+.widget_meta,
+.widget_recent_entries,
+.widget_recent_comments,
+.widget_rss,
+.widget_tag_cloud,
+.widget_nav_menu {
+  a {
+    color: var(--text-color);
+    
+    &:hover {
+      text-decoration: none;
+      color: var(--anchor-color);
+    }
+  }
+}
+
+.widget_archive,
+.widget_categories,
+.widget_pages,
+.widget_meta,
+.widget_recent_entries,
+.widget_recent_comments,
+.widget_rss,
+.widget_nav_menu {
+  ul {
+    list-style: none;
+  }
+
+  > ul > li + li {
+    border-block-start: var(--border-width) solid var(--border-color);
+  }
+}
+
+.widget_archive,
+.widget_categories,
+.widget_pages,
+.widget_meta,
+.widget_recent_entries,
+.widget_recent_comments,
+.widget_nav_menu {
+  li {
+    line-height: 2.5;
+  }
+}
+
+.widget_recent_comments,
+.widget_rss {
+  a {
+    font-weight: 600;
+    color: var(--scheme-color);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.widget_calendar {
+  table {
+    max-width: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  td,
+  th {
+    text-align: center;
+    padding: .5em;
+
+    @media (min-width: $screen_laptop) {
+      padding: .75em;
+    }
+  }
+
+  caption {
+    margin-block-end: .5em;
+  }
+
+  .wp-calendar-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.widget_rss {
+  .widget-title {
+    img {
+      display: none;
+    }
+
+    a {
+      color: var(--text-color);
+    }
+  }
+
+  .rss-date {
+    display: block;
+    font-weight: 600;
+    font-size: .9rem;
+  }
+
+  li {
+    line-height: 1.5;
+  }
+
+  li + li {
+    margin-block-start: 1em;
+    padding-block-start: 1em;
+  }
+}
+
+.widget-area-header,
+.widget-area-footer-top,
+.widget-area-footer-bottom {
+  .widget_archive,
+  .widget_categories,
+  .widget_pages,
+  .widget_meta,
+  .widget_recent_entries,
+  .widget_recent_comments,
+  .widget_tag_cloud,
+  .widget_nav_menu {
+    a {
+      color: var(--color-white);
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .widget_rss .widget-title a {
+    color: var(--color-white);
+  }
+}

@@ -1,0 +1,33 @@
+/* Site header nav: Social bar */
+.social-bar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .75em;
+  font-size: 1.875rem;
+  justify-content: flex-end;
+
+  a:hover {
+    color: var(--anchor-color);
+  }
+
+  @media (min-width: $screen_laptop) {
+    background-color: var(--color-black);
+    position: fixed;
+    inset-block-start: 0;
+    padding: 0;
+    padding-block: 8rem .5em;
+    margin: 0;
+    width: 3.75rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-content: center;
+    align-items: center;
+    z-index: 20;
+    height: auto;
+    margin-inline-start: -3.75rem;
+    border-end-start-radius: var(--border-radius);
+    border-end-end-radius: var(--border-radius);
+  }
+}

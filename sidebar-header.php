@@ -3,17 +3,15 @@
  * Template for displaying a widget area in the header
  *
  * @package Herschel
- * @since 1.0.0
- * @version 1.5.0 [Changed class names]
+ * @since   Herschel 1.0
  */
+
 ?>
 
-<?php if ( is_active_sidebar( 'header-widget-area' ) ): ?>
+<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
 
-  <div id="widget-area-header" class="widget-area" role="complementary">
-
+  <div class="widget-area widget-area-header" role="complementary">
     <?php dynamic_sidebar( 'header-widget-area' ); ?>
-
   </div>
 
 <?php endif; ?>

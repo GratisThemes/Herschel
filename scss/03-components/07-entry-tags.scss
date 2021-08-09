@@ -1,0 +1,31 @@
+/* Components: Entry tags */
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+  font-size: .9rem;
+
+  a {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-600);
+    padding: .35em .5em;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--scheme-color);
+      color: var(--color-white);
+    }
+
+    &::before {
+      font-family: 'Font Awesome 5 Free';
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      content: '\f02b';
+      font-weight: 900;
+      margin-inline-end: .5em;
+    }
+  }
+}

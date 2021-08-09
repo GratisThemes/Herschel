@@ -1,0 +1,103 @@
+/* Compoinents: Nav links */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1em;
+  font-size: .9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  a {
+    color: var(--scheme-color);
+
+    i {
+      color: var(--text-color);
+    }
+  }
+}
+
+.pagination .nav-links {
+  justify-content: flex-start;
+}
+
+.nav-previous,
+.nav-next,
+.page-numbers:not(.dots) {
+  text-decoration: none;
+}
+
+.nav-next {
+  margin-inline-start: auto;
+}
+
+.nav-previous ~ .nav-next {
+  margin-inline-start: 0;
+}
+
+.nav-previous a,
+.nav-next a,
+.page-numbers:not(.dots) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-previous a:hover::after,
+.nav-next a:hover::after {
+  background-color: var(--scheme-color);
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: .125em;
+  inset-inline: 0;
+  inset-block-end: -.25em;
+}
+
+.page-numbers.dots {
+  padding: .75em .5em 0;
+}
+
+.page-numbers.current {
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.nav-previous i,
+.page-numbers.prev i {
+  margin-right: .5em;
+}
+
+.nav-next i,
+.page-numbers.next i {
+  margin-left: .5em;
+}
+
+.pagination .nav-links {
+  .nav-previous,
+  .nav-next,
+  .page-numbers:not(.dots) {
+    padding: .25em .5em;
+  }
+  .nav-previous,
+  .nav-next,
+  .page-numbers:not(.dots) {
+    border: var(--border-width) solid var(--scheme-color);
+    border-radius: var(--border-radius);
+  }
+
+  .nav-previous,
+  .nav-next,
+  .page-numbers:not(.dots, .current) {
+    background-color: var(--scheme-color);
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      filter: brightness(110%);
+    }
+  }
+}

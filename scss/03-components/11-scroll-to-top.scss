@@ -1,0 +1,40 @@
+/* Components: Scroll to top */
+#scroll-to-top {
+  background-color: var(--background-color-alt);
+  border: .125em solid var(--color-white);
+  position: fixed;
+  inset-block-end: -2000px;
+  inset-inline-end: 1rem;
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-sizing: content-box;
+  transition: inset 1s ease-in-out, background-color .3s ease-in-out;
+
+  &::before,
+  &::after {
+    background-color: var(--color-white);
+    position: absolute;
+    content: "";
+    width: 43%;
+    height: .125em;
+  }
+
+  &::before {
+    inset-block-start: 47%;
+    inset-inline-end: 15%;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    inset-block-start: 47%;
+    inset-inline-start: 15%;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    background-color: var(--scheme-color);
+  }
+}

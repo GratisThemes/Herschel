@@ -1,0 +1,61 @@
+/* Components: Headers */
+.archive-header,
+.page-header,
+.entry-header {
+  position: relative;
+  
+  h1,
+  h2 {
+    margin: 0;
+
+    i {
+      margin-inline-end: .25em;
+    }
+  }
+
+  h1 {
+    font-size: 2.6rem;
+
+    @media (min-width: $screen_large_phone) {
+      font-size: 3rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.7rem;
+
+    @media (min-width: $screen_large_phone) {
+      font-size: 2rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--scheme-color);
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.archive-header,
+.page-header,
+body.single .entry-header {
+  margin-block-end: 2rem;
+}
+
+.sticky .entry-header h2::before {
+  font-family: 'Font Awesome 5 Free';
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  content: '\f249';
+  font-weight: 900;
+  margin-inline-end: .25em;
+}

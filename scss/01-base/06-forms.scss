@@ -1,0 +1,114 @@
+/* Base: Forms */
+input,
+textarea,
+select {
+  background-color: var(--color-gray-200);
+  color: var(--color-black);
+  max-width: 100%;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: .5em .75em;
+}
+
+/* iOS not respecting border-radius */
+[type="text"],
+[type="email"],
+[type="url"],
+[type="password"],
+[type="number"],
+[type="tel"],
+[type="color"],
+[type="datetime"],
+[list="datalist"],
+[type="search"],
+textarea {
+  -webkit-appearance: none;
+}
+
+[type="color"] {
+  padding: initial;
+  cursor: pointer;
+  box-sizing: content-box;
+  padding: .25em .5em;
+}
+
+[type="file"] {
+  padding: .5em;
+}
+
+/* buttons */
+button,
+.button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background-color: var(--btn-background-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: .5em .75em;
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    filter: brightness(110%);
+    text-decoration: none;
+  }
+}
+
+[type="submit"] {
+  background-color: var(--background-color-alt);
+}
+
+fieldset {
+  min-width: 0px;
+}
+
+/* Password  and search forms */
+.search-form,
+.post-password-form p:nth-child(2)  {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .5em;
+}
+
+.search-form {
+  overflow: hidden;
+}
+
+.search-form .search-field,
+.post-password-form [type="password"] {
+  width: 100%;
+}
+
+.search-form > label,
+.search-form .search-submit,
+.post-password-form p:nth-child(2) > label,
+.post-password-form [type="submit"] {
+  flex-grow: 1;
+}
+
+.post-password-form [type="submit"],
+.search-form .search-submit {
+  background-color: var(--btn-background-color);
+  border: var(--border-width) solid var(--btn-background-color);
+  padding: .5em .75em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (min-width: $screen_phone) {
+  .post-password-form p:nth-child(2) {
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+
+  .post-password-form [type="submit"] {
+    flex-grow: 0;
+  }
+}

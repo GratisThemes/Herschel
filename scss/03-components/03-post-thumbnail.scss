@@ -1,0 +1,9 @@
+/* Components: Post thumbnail */
+.post-thumbnail {
+  display: block;
+  margin-block: 1rem;
+
+  img {
+    border-radius: var(--border-radius);
+  }
+}
