@@ -98,13 +98,22 @@ body.layout-condensed .content-container {
       width: calc(50% - 2em);
     }
 
-    > *:first-child,
-    .pagination {
-      width: 100%;
-    }
-
     > * + * {
       margin-block-start: 0;
     }
   }
+}
+
+body.layout-condensed:not(.paged) .content-container > *:first-child,
+body.layout-condensed .content-container .pagination,
+body.layout-condensed .content-container > *.post_format-post-format-gallery,
+body.layout-condensed .content-container > *.post_format-post-format-image,
+body.layout-condensed .content-container > *.post_format-post-format-audio,
+body.layout-condensed .content-container > *.post_format-post-format-aside,
+body.layout-condensed .content-container > *.post_format-post-format-quote,
+body.layout-condensed .content-container > *.post_format-post-format-status,
+body.layout-condensed .content-container > *.post_format-post-format-video,
+body.layout-condensed .content-container > *.post_format-post-format-chat,
+body.layout-condensed .content-container > *.post_format-post-format-link {
+  width: 100%;
 }
