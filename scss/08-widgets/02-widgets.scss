@@ -57,18 +57,7 @@
 
   > ul > li + li {
     border-block-start: var(--border-width) solid var(--border-color);
-  }
-}
-
-.widget_archive,
-.widget_categories,
-.widget_pages,
-.widget_meta,
-.widget_recent_entries,
-.widget_recent_comments,
-.widget_nav_menu {
-  li {
-    line-height: 2.5;
+    padding-block-start: .5em;
   }
 }
 
