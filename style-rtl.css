@@ -5,7 +5,7 @@
   Author: Gratis Themes
   Author URI: https://gratisthemes.kniffen.dev/
   Description: Start your blog today. Create a blog that is easy to use and looks good at any screen size. This theme should allow your readers to focus on your content.
-  Version: 2.0.0
+  Version: 2.0.1
   Requires at least: 5.0
   Tested up to: 5.7
   Requires PHP: 7.0
@@ -565,12 +565,13 @@ dd {
 
 ul,
 ol {
-  margin: 0 2em 0 0;
+  -webkit-margin-start: 2em;
+          margin-inline-start: 2em;
   padding: 0;
 }
 
 li {
-  line-height: 1.8;
+  margin-block: 0.65em;
 }
 
 /* Base: Tables */
@@ -1568,14 +1569,24 @@ body,
     width: -webkit-calc(50% - 2em);
     width: calc(50% - 2em);
   }
-  body.layout-condensed .content-container > *:first-child,
-body.layout-condensed .content-container .pagination {
-    width: 100%;
-  }
   body.layout-condensed .content-container > * + * {
     -webkit-margin-before: 0;
             margin-block-start: 0;
   }
+}
+
+body.layout-condensed:not(.paged) .content-container > *:first-child,
+body.layout-condensed .content-container .pagination,
+body.layout-condensed .content-container > *.post_format-post-format-gallery,
+body.layout-condensed .content-container > *.post_format-post-format-image,
+body.layout-condensed .content-container > *.post_format-post-format-audio,
+body.layout-condensed .content-container > *.post_format-post-format-aside,
+body.layout-condensed .content-container > *.post_format-post-format-quote,
+body.layout-condensed .content-container > *.post_format-post-format-status,
+body.layout-condensed .content-container > *.post_format-post-format-video,
+body.layout-condensed .content-container > *.post_format-post-format-chat,
+body.layout-condensed .content-container > *.post_format-post-format-link {
+  width: 100%;
 }
 
 /* Pages/lauout: Attachment */
@@ -1706,6 +1717,11 @@ body.layout-condensed .content-container .pagination {
   padding: 2em 1em 1em;
   z-index: 10;
 }
+.site-header-nav .header-nav ul,
+.site-header-nav .header-nav li {
+  margin: 0;
+  padding: 0;
+}
 @media (min-width: 64em) {
   .site-header-nav .header-nav {
     background-color: transparent;
@@ -1755,11 +1771,7 @@ body.layout-condensed .content-container .pagination {
 }
 .site-header-nav .header-nav li {
   position: relative;
-}
-@media (min-width: 64em) {
-  .site-header-nav .header-nav li {
-    padding: 0.5em 1em;
-  }
+  padding: 1em;
 }
 .site-header-nav .header-nav > li > ul {
   display: none;
@@ -2250,16 +2262,8 @@ body.layout-condensed .content-container .pagination {
 .widget_nav_menu > ul > li + li {
   -webkit-border-before: var(--border-width) solid var(--border-color);
           border-block-start: var(--border-width) solid var(--border-color);
-}
-
-.widget_archive li,
-.widget_categories li,
-.widget_pages li,
-.widget_meta li,
-.widget_recent_entries li,
-.widget_recent_comments li,
-.widget_nav_menu li {
-  line-height: 2.5;
+  -webkit-padding-before: 0.5em;
+          padding-block-start: 0.5em;
 }
 
 .widget_recent_comments a,

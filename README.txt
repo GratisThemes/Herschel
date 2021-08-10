@@ -51,6 +51,11 @@ License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0
 
 #Versions
 
+2.0.1 - 2021.08.10
+- Fixed list spacing
+- Fixed inconsistent condensed layout
+- Fixed post-format posts not being 100% width in condensed layout
+
 2.0.0 - 2021.08.09
 Rewwritten from the ground up Herschel 2.0 aims to capture the original vision of the theme, but with a cleaner approach.
 
