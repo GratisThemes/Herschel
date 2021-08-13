@@ -21,7 +21,6 @@
   figcaption {
     margin: 0;
     padding: 1em;
-    // border-block-start: 0;
     border-end-start-radius: var(--border-radius);
     border-end-end-radius: var(--border-radius);
   }
@@ -132,4 +131,24 @@ p.wp-block-cover-text:not(.has-text-color) {
 .wp-block-verse {
   font-family: var(--font-family);
   padding: .5em 0;
+}
+
+.wp-block-preformatted {
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.wp-block-separator {
+  border: none;
+  width: 25%;
+  margin-inline: auto;
+}
+
+.wp-block-separator.is-style-wide {
+  width: 100%;
+}
+
+.wp-block-calendar table {
+  display: table;
+  margin-block: 1em;
 }
