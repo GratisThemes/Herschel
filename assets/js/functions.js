@@ -4,6 +4,7 @@
   const siteHeader   = html.querySelector( '.site-header' )
   const socialBar    = html.querySelector( '.social-bar' )
   const scrollToTop  = html.querySelector( '#scroll-to-top' )
+  const alignfull   = html.querySelectorAll( '.alignfull' )
   
   // Replace no-js class with js on html element
   html.classList.remove( 'no-js' )
@@ -14,6 +15,13 @@
 
     socialBar.style.paddingBlockStart =
       window.outerWidth < 1024 ? '0px' : (distance > 16 ? distance : 16) + 'px';
+  }
+
+  // Full alignment
+  const scrollBarWidth = window.innerWidth - document.body.clientWidth
+  for ( const element of alignfull ) {
+    element.style.width      = `calc(100vw - ${scrollBarWidth}px)`
+    element.style.marginLeft = `calc(50% - 50vw + ${scrollBarWidth / 2}px)`
   }
 
   setSocialBarPadding()
