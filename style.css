@@ -5,7 +5,7 @@
   Author: Gratis Themes
   Author URI: https://gratisthemes.kniffen.dev/
   Description: Start your blog today. Create a blog that is easy to use and looks good at any screen size. This theme should allow your readers to focus on your content.
-  Version: 2.0.1
+  Version: 2.0.2
   Requires at least: 5.0
   Tested up to: 5.7
   Requires PHP: 7.0
@@ -584,7 +584,6 @@ th {
 table {
   display: inline-block;
   border-spacing: 0;
-  border-collapse: collapse;
   max-width: 100%;
   overflow-x: auto;
   white-space: nowrap;
@@ -595,6 +594,7 @@ table {
   table {
     display: table;
     white-space: initial;
+    border-collapse: collapse;
   }
 }
 
@@ -2727,4 +2727,24 @@ p.wp-block-cover-text:not(.has-text-color) {
 .wp-block-verse {
   font-family: var(--font-family);
   padding: 0.5em 0;
+}
+
+.wp-block-preformatted {
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.wp-block-separator {
+  border: none;
+  width: 25%;
+  margin-inline: auto;
+}
+
+.wp-block-separator.is-style-wide {
+  width: 100%;
+}
+
+.wp-block-calendar table {
+  display: table;
+  margin-block: 1em;
 }

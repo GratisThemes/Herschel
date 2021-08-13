@@ -51,6 +51,11 @@ License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0
 
 #Versions
 
+2.0.2 - 2021.08.13
+- Improved basic block styles
+- Improved .alignfull
+- Fixed footer text setting not working
+
 2.0.1 - 2021.08.10
 - Fixed list spacing
 - Fixed inconsistent condensed layout
