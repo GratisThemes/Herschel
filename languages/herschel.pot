@@ -1,4 +1,4 @@
-# Copyright (C) 2021 herschel
+# Copyright (C) 2022 herschel
 # This file is distributed under the same license as the herschel package.
 msgid ""
 msgstr ""
